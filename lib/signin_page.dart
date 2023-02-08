@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:united/signup_page.dart';
-import 'main.dart';
 
 TextEditingController nameController = TextEditingController();
 TextEditingController passwordController = TextEditingController();
 
-class Signin_page extends StatefulWidget {
-  const Signin_page({Key? key}) : super(key: key);
+class SignInPage extends StatefulWidget {
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
-  _Signin_page createState() => _Signin_page();
+  // ignore: library_private_types_in_public_api
+  _SignInPage createState() => _SignInPage();
 }
 
-class _Signin_page extends State<Signin_page> {
+class _SignInPage extends State<SignInPage> {
   final nameController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -23,14 +23,15 @@ class _Signin_page extends State<Signin_page> {
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 240, 220, 220),
+        backgroundColor: const Color.fromARGB(255, 240, 220, 220),
         body: Padding(
             padding: const EdgeInsets.all(10),
             child: ListView(
               children: <Widget>[
-                SizedBox(
+                const SizedBox(
                   //Etsi vazo empty space
                   height: 50,
                 ),
@@ -51,7 +52,7 @@ class _Signin_page extends State<Signin_page> {
                             fontSize: 30),
                       ),
                     ),
-                    Icon(
+                    const Icon(
                       Icons.school_outlined,
                       size: 40,
                     ),
@@ -64,7 +65,7 @@ class _Signin_page extends State<Signin_page> {
                       'Designed by students for students!',
                       style: TextStyle(fontSize: 20),
                     )),
-                SizedBox(
+                const SizedBox(
                   //Etsi vazo empty space
                   height: 35,
                 ),
@@ -75,7 +76,7 @@ class _Signin_page extends State<Signin_page> {
                       'Welcome Back!',
                       style: TextStyle(fontSize: 40),
                     )),
-                SizedBox(
+                const SizedBox(
                   //Etsi vazo empty space
                   height: 35,
                 ),
@@ -86,16 +87,16 @@ class _Signin_page extends State<Signin_page> {
                     decoration: InputDecoration(
                       filled:
                           true, //Gia na parei to fillColor prepei filled == true
-                      fillColor: Color.fromARGB(238, 157, 61, 206),
+                      fillColor: const Color.fromARGB(238, 157, 61, 206),
                       hintText: 'Username',
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintStyle: const TextStyle(color: Colors.white),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             color: Color.fromARGB(255, 255, 255, 255)),
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color.fromARGB(238, 157, 61, 206)),
                           borderRadius: BorderRadius.circular(20.0)),
                     ),
@@ -108,16 +109,17 @@ class _Signin_page extends State<Signin_page> {
                     decoration: InputDecoration(
                       filled:
                           true, //Gia na parei to fillColor prepei filled == true
+                      // ignore: prefer_const_constructors
                       fillColor: Color.fromARGB(255, 255, 255, 255),
                       hintText: 'Password',
                       hintStyle: TextStyle(color: Colors.black),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             color: Color.fromARGB(255, 255, 255, 255)),
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color.fromARGB(255, 255, 255, 255)),
                           borderRadius: BorderRadius.circular(20.0)),
                     ),
@@ -139,17 +141,18 @@ class _Signin_page extends State<Signin_page> {
                   ),
                   TextButton(
                     style: TextButton.styleFrom(
-                      foregroundColor: Color.fromARGB(238, 157, 61, 206),
+                      foregroundColor: const Color.fromARGB(238, 157, 61, 206),
                       textStyle: const TextStyle(fontSize: 15),
                     ),
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Signup_page()));
+                              builder: (context) => SignUpPage()));
                     },
-                    child: Text('here'),
+                    child: const Text('here'),
                   ),
+                  // ignore: avoid_unnecessary_containers
                   Container(
                     child: const Text(
                       'to sign up.',
@@ -157,7 +160,7 @@ class _Signin_page extends State<Signin_page> {
                     ),
                   ),
                 ]),
-                SizedBox(
+                const SizedBox(
                   //Etsi vazo empty space
                   height: 70,
                 ),
@@ -171,9 +174,10 @@ class _Signin_page extends State<Signin_page> {
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 shape:
+                                    // ignore: prefer_const_constructors
                                     StadiumBorder(), //Etsi kano to button rechtangle with circular
                                 backgroundColor:
-                                    Color.fromARGB(238, 157, 61, 206)),
+                                    const Color.fromARGB(238, 157, 61, 206)),
                             child: const Text(
                               'Back',
                               style: TextStyle(
@@ -187,7 +191,7 @@ class _Signin_page extends State<Signin_page> {
                       height: 50,
                       width: 100,
                       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      color: Color.fromARGB(255, 240, 220, 220),
+                      color: const Color.fromARGB(255, 240, 220, 220),
                     ),
                     Container(
                         height: 50,
@@ -196,9 +200,9 @@ class _Signin_page extends State<Signin_page> {
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 shape:
-                                    StadiumBorder(), //Etsi kano to button rechtangle with circular
+                                    const StadiumBorder(), //Etsi kano to button rechtangle with circular
                                 backgroundColor:
-                                    Color.fromARGB(238, 157, 61, 206)),
+                                    const Color.fromARGB(238, 157, 61, 206)),
                             child: const Text(
                               'Next',
                               style: TextStyle(
@@ -209,7 +213,7 @@ class _Signin_page extends State<Signin_page> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Signup_page()));
+                                      builder: (context) => SignUpPage()));
                             }))
                   ],
                 )

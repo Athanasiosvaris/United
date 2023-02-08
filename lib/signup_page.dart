@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:united/signin_page.dart';
 import 'main.dart';
 
-class Signup_page extends StatefulWidget {
-  const Signup_page({Key? key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
-  _Signup_page createState() => _Signup_page();
+  // ignore: library_private_types_in_public_api
+  _SignUpPage createState() => _SignUpPage();
 }
 
-class _Signup_page extends State<Signup_page> {
+class _SignUpPage extends State<SignUpPage> {
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final linkedinController = TextEditingController();
@@ -20,12 +21,12 @@ class _Signup_page extends State<Signup_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 240, 220, 220),
+        backgroundColor: const Color.fromARGB(255, 240, 220, 220),
         body: Padding(
             padding: const EdgeInsets.all(5),
             child: ListView(
               children: <Widget>[
-                SizedBox(
+                const SizedBox(
                   //Etsi vazo empty space
                   height: 50,
                 ),
@@ -69,16 +70,16 @@ class _Signup_page extends State<Signup_page> {
                     decoration: InputDecoration(
                       filled:
                           true, //Gia na parei to fillColor prepei filled == true
-                      fillColor: Color.fromARGB(255, 255, 255, 255),
+                      fillColor: const Color.fromARGB(255, 255, 255, 255),
                       hintText: 'Enter your full name',
-                      hintStyle: TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.black),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             color: Color.fromARGB(255, 255, 255, 255)),
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color.fromARGB(255, 255, 255, 255)),
                           borderRadius: BorderRadius.circular(20.0)),
                     ),
@@ -91,16 +92,17 @@ class _Signup_page extends State<Signup_page> {
                     decoration: InputDecoration(
                       filled:
                           true, //Gia na parei to fillColor prepei filled == true
-                      fillColor: Color.fromARGB(255, 255, 255, 255),
+                      fillColor: const Color.fromARGB(255, 255, 255, 255),
                       hintText: 'Enter your email',
-                      hintStyle: TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.black),
                       focusedBorder: OutlineInputBorder(
+                        // ignore: prefer_const_constructors
                         borderSide: BorderSide(
-                            color: Color.fromARGB(255, 255, 255, 255)),
+                            color: const Color.fromARGB(255, 255, 255, 255)),
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color.fromARGB(255, 255, 255, 255)),
                           borderRadius: BorderRadius.circular(20.0)),
                     ),
@@ -113,16 +115,16 @@ class _Signup_page extends State<Signup_page> {
                     decoration: InputDecoration(
                       filled:
                           true, //Gia na parei to fillColor prepei filled == true
-                      fillColor: Color.fromARGB(255, 255, 255, 255),
+                      fillColor: const Color.fromARGB(255, 255, 255, 255),
                       hintText: 'Enter your Linkedin link',
-                      hintStyle: TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.black),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             color: Color.fromARGB(255, 255, 255, 255)),
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color.fromARGB(255, 255, 255, 255)),
                           borderRadius: BorderRadius.circular(20.0)),
                     ),
@@ -135,16 +137,17 @@ class _Signup_page extends State<Signup_page> {
                     decoration: InputDecoration(
                       filled:
                           true, //Gia na parei to fillColor prepei filled == true
+                      // ignore: prefer_const_constructors
                       fillColor: Color.fromARGB(255, 255, 255, 255),
                       hintText: 'Enter your username',
-                      hintStyle: TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.black),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             color: Color.fromARGB(255, 255, 255, 255)),
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color.fromARGB(255, 255, 255, 255)),
                           borderRadius: BorderRadius.circular(20.0)),
                     ),
@@ -157,16 +160,16 @@ class _Signup_page extends State<Signup_page> {
                     decoration: InputDecoration(
                       filled:
                           true, //Gia na parei to fillColor prepei filled == true
-                      fillColor: Color.fromARGB(255, 255, 255, 255),
+                      fillColor: const Color.fromARGB(255, 255, 255, 255),
                       hintText: 'Enter your password',
-                      hintStyle: TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.black),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             color: Color.fromARGB(255, 255, 255, 255)),
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color.fromARGB(255, 255, 255, 255)),
                           borderRadius: BorderRadius.circular(20.0)),
                     ),
@@ -179,16 +182,16 @@ class _Signup_page extends State<Signup_page> {
                     decoration: InputDecoration(
                       filled:
                           true, //Gia na parei to fillColor prepei filled == true
-                      fillColor: Color.fromARGB(255, 255, 255, 255),
+                      fillColor: const Color.fromARGB(255, 255, 255, 255),
                       hintText: 'Enter your university and department',
-                      hintStyle: TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.black),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             color: Color.fromARGB(255, 255, 255, 255)),
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                               color: Color.fromARGB(255, 255, 255, 255)),
                           borderRadius: BorderRadius.circular(20.0)),
                     ),
@@ -204,9 +207,9 @@ class _Signup_page extends State<Signup_page> {
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 shape:
-                                    StadiumBorder(), //Etsi kano to button rechtangle with circular
+                                    const StadiumBorder(), //Etsi kano to button rechtangle with circular
                                 backgroundColor:
-                                    Color.fromARGB(238, 157, 61, 206)),
+                                    const Color.fromARGB(238, 157, 61, 206)),
                             child: const Text(
                               'Back',
                               style: TextStyle(
@@ -218,12 +221,13 @@ class _Signup_page extends State<Signup_page> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          Signin_page())); // Etsi pao piso
+                                          const SignInPage())); // Etsi pao piso
                             })),
                     Container(
                       height: 50,
                       width: 100,
                       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      // ignore: prefer_const_constructors
                       color: Color.fromARGB(255, 240, 220, 220),
                     ),
                     Container(
@@ -233,9 +237,9 @@ class _Signup_page extends State<Signup_page> {
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 shape:
-                                    StadiumBorder(), //Etsi kano to button rechtangle with circular
+                                    const StadiumBorder(), //Etsi kano to button rechtangle with circular
                                 backgroundColor:
-                                    Color.fromARGB(238, 157, 61, 206)),
+                                    const Color.fromARGB(238, 157, 61, 206)),
                             child: const Text(
                               'Next',
                               style: TextStyle(
@@ -246,7 +250,8 @@ class _Signup_page extends State<Signup_page> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Signup_page()));
+                                      builder: (context) =>
+                                          const SignUpPage()));
                             }))
                   ],
                 )
