@@ -83,7 +83,7 @@ class _Firstscreen extends State<Firstscreen> {
                       style: TextStyle(fontSize: 20),
                     )),
                 SizedBox(
-                  //Etsi vazo empty space
+                  //Etsi vazo empty space??
                   height: 100,
                 ),
                 Image.asset(
