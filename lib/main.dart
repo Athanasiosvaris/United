@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:united/signin_page.dart';
 import 'package:united/signup_page.dart';
+//Evala 1 sxolio
 
 void main() {
   runApp(const United());
@@ -83,7 +84,7 @@ class _Firstscreen extends State<Firstscreen> {
                       style: TextStyle(fontSize: 20),
                     )),
                 SizedBox(
-                  //Etsi vazo empty space??
+                  // Etsi vazo empty space??sdasas
                   height: 100,
                 ),
                 Image.asset(
