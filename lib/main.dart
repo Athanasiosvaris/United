@@ -22,7 +22,7 @@ class United extends StatelessWidget {
       // theme: ThemeData(primarySwatch: Colors.amber),
       theme: ThemeData().copyWith(
           colorScheme: ThemeData().colorScheme.copyWith(
-                primary: Color.fromARGB(255, 240, 220, 220),
+                primary: const Color.fromARGB(255, 240, 220, 220),
               )),
 
       /// Arxikopoihsh ths arxikis thonis ths efarmogis mas (TaskListScreen)
@@ -43,14 +43,14 @@ class _Firstscreen extends State<Firstscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 240, 220, 220),
+        backgroundColor: const Color.fromARGB(255, 240, 220, 220),
 
         // ignore: prefer_const_constructors
         body: Padding(
             padding: const EdgeInsets.all(10),
             child: ListView(
               children: <Widget>[
-                SizedBox(
+                const SizedBox(
                   //Etsi vazo empty space
                   height: 50,
                 ),
@@ -71,7 +71,7 @@ class _Firstscreen extends State<Firstscreen> {
                             fontSize: 30),
                       ),
                     ),
-                    Icon(
+                    const Icon(
                       Icons.school_outlined,
                       size: 40,
                     ),
@@ -85,14 +85,14 @@ class _Firstscreen extends State<Firstscreen> {
                       style: TextStyle(fontSize: 20),
                     )),
                 SizedBox(
-                  // Etsi vazo empty space??sdasas
+                  //Etsi vazo empty space
                   height: 100,
                 ),
                 Image.asset(
                   'assets/images/uni.png',
                   height: 100.0,
                 ),
-                SizedBox(
+                const SizedBox(
                   //Etsi vazo empty space
                   height: 100,
                 ),
@@ -101,8 +101,9 @@ class _Firstscreen extends State<Firstscreen> {
                     padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          shape: StadiumBorder(),
-                          backgroundColor: Color.fromARGB(238, 157, 61, 206)),
+                          shape: const StadiumBorder(),
+                          backgroundColor:
+                              const Color.fromARGB(238, 157, 61, 206)),
                       child: const Text(
                         'Sign Up',
                         style: TextStyle(
@@ -113,10 +114,10 @@ class _Firstscreen extends State<Firstscreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Signup_page()));
+                                builder: (context) => const SignUpPage()));
                       },
                     )),
-                SizedBox(
+                const SizedBox(
                   //Etsi vazo empty space
                   height: 20,
                 ),
@@ -126,9 +127,9 @@ class _Firstscreen extends State<Firstscreen> {
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             shape:
-                                StadiumBorder(), //Etsi kano to button rechtangle with circular
+                                const StadiumBorder(), //Etsi kano to button rechtangle with circular
                             backgroundColor:
-                                Color.fromARGB(255, 255, 255, 255)),
+                                const Color.fromARGB(255, 255, 255, 255)),
                         child: const Text(
                           'Sign In',
                           style: TextStyle(
@@ -139,7 +140,7 @@ class _Firstscreen extends State<Firstscreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Signin_page()));
+                                  builder: (context) => const SignInPage()));
                         })),
               ],
             )));
