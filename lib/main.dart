@@ -20,7 +20,7 @@ class United extends StatelessWidget {
       // theme: ThemeData(primarySwatch: Colors.amber),
       theme: ThemeData().copyWith(
           colorScheme: ThemeData().colorScheme.copyWith(
-                primary: const Color.fromARGB(1, 202, 196, 208),
+                primary: const Color.fromARGB(255, 202, 196, 208),
               )),
 
       /// Arxikopoihsh ths arxikis thonis ths efarmogis mas (TaskListScreen)
@@ -83,29 +83,29 @@ class _Firstscreen extends State<Firstscreen> {
                       'Designed by students for students!',
                       style: TextStyle(fontSize: 20),
                     )),
-                const SizedBox(
-                  //Etsi vazo empty space
-                  height: 100,
-                ),
-                Image.asset(
-                  'assets/images/uni.png',
-                  height: 100.0,
-                ),
-                const SizedBox(
-                  //Etsi vazo empty space
-                  height: 100,
+                Container(
+                  height: 300.00,
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(10),
+                  child: const Icon(
+                    Icons.house,
+                    size: 150,
+                  ),
                 ),
                 Container(
-                    height: 50,
+                    height: 80,
                     padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          shape: const StadiumBorder(),
-                          backgroundColor:
-                              const Color.fromARGB(238, 157, 61, 206)),
+                        elevation: 5,
+                        shape: const StadiumBorder(),
+                        backgroundColor:
+                            const Color.fromARGB(255, 154, 130, 219),
+                      ),
                       child: const Text(
                         'Sign Up',
                         style: TextStyle(
+                          fontSize: 20,
                           color: Colors.white,
                         ),
                       ),
@@ -121,10 +121,11 @@ class _Firstscreen extends State<Firstscreen> {
                   height: 20,
                 ),
                 Container(
-                    height: 50,
+                    height: 80,
                     padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
+                            elevation: 5,
                             shape:
                                 const StadiumBorder(), //Etsi kano to button rechtangle with circular
                             backgroundColor:
@@ -132,6 +133,7 @@ class _Firstscreen extends State<Firstscreen> {
                         child: const Text(
                           'Sign In',
                           style: TextStyle(
+                            fontSize: 20,
                             color: Colors.black,
                           ),
                         ),

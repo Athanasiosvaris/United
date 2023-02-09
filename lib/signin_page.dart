@@ -112,7 +112,7 @@ class _SignInPage extends State<SignInPage> {
                       // ignore: prefer_const_constructors
                       fillColor: Color.fromARGB(255, 255, 255, 255),
                       hintText: 'Password',
-                      hintStyle: TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.black),
                       focusedBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                             color: Color.fromARGB(255, 255, 255, 255)),
@@ -148,7 +148,7 @@ class _SignInPage extends State<SignInPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SignUpPage()));
+                              builder: (context) => const SignUpPage()));
                     },
                     child: const Text('here'),
                   ),
@@ -213,7 +213,7 @@ class _SignInPage extends State<SignInPage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => SignUpPage()));
+                                      builder: (context) => const SignUpPage()));
                             }))
                   ],
                 )
