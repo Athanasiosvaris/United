@@ -94,16 +94,16 @@ class _Firstscreen extends State<Firstscreen> {
                 ),
                 Container(
                     height: 80,
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    padding: const EdgeInsets.all(10),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        elevation: 5,
-                        shape: const StadiumBorder(),
-                        backgroundColor:
-                            const Color.fromARGB(255, 154, 130, 219),
-                      ),
+                          elevation: 5,
+                          shape: const StadiumBorder(),
+                          backgroundColor:
+                              const Color.fromARGB(255, 154, 130, 219)),
                       child: const Text(
                         'Sign Up',
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,
@@ -116,13 +116,9 @@ class _Firstscreen extends State<Firstscreen> {
                                 builder: (context) => const SignUpPage()));
                       },
                     )),
-                const SizedBox(
-                  //Etsi vazo empty space
-                  height: 20,
-                ),
                 Container(
                     height: 80,
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    padding: const EdgeInsets.all(10),
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             elevation: 5,
@@ -132,6 +128,7 @@ class _Firstscreen extends State<Firstscreen> {
                                 const Color.fromARGB(255, 255, 255, 255)),
                         child: const Text(
                           'Sign In',
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 20,
                             color: Colors.black,

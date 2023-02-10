@@ -26,7 +26,7 @@ class _SignInPage extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 240, 220, 220),
+        backgroundColor: const Color.fromARGB(255, 202, 196, 208),
         body: Padding(
             padding: const EdgeInsets.all(10),
             child: ListView(
@@ -66,7 +66,6 @@ class _SignInPage extends State<SignInPage> {
                       style: TextStyle(fontSize: 20),
                     )),
                 const SizedBox(
-                  //Etsi vazo empty space
                   height: 35,
                 ),
                 Container(
@@ -77,35 +76,34 @@ class _SignInPage extends State<SignInPage> {
                       style: TextStyle(fontSize: 40),
                     )),
                 const SizedBox(
-                  //Etsi vazo empty space
                   height: 35,
                 ),
                 Container(
+                  alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
                   child: TextField(
                     controller: nameController,
                     decoration: InputDecoration(
-                      filled:
-                          true, //Gia na parei to fillColor prepei filled == true
-                      fillColor: const Color.fromARGB(238, 157, 61, 206),
-                      hintText: 'Username',
-                      hintStyle: const TextStyle(color: Colors.white),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 255, 255, 255)),
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                              color: Color.fromARGB(238, 157, 61, 206)),
-                          borderRadius: BorderRadius.circular(20.0)),
-                    ),
+                        filled:
+                            true, //Gia na parei to fillColor prepei filled == true
+                        fillColor: const Color.fromARGB(255, 154, 130, 219),
+                        hintText: 'Username',
+                        hintStyle: const TextStyle(color: Colors.black),
+                        disabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20.0))),
                   ),
                 ),
                 Container(
                   padding: const EdgeInsets.all(10),
                   child: TextField(
                     controller: passwordController,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      height: 5.0,
+                    ),
                     decoration: InputDecoration(
                       filled:
                           true, //Gia na parei to fillColor prepei filled == true
@@ -113,15 +111,9 @@ class _SignInPage extends State<SignInPage> {
                       fillColor: Color.fromARGB(255, 255, 255, 255),
                       hintText: 'Password',
                       hintStyle: const TextStyle(color: Colors.black),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 255, 255, 255)),
+                      border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0),
                       ),
-                      enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 255, 255, 255)),
-                          borderRadius: BorderRadius.circular(20.0)),
                     ),
                   ),
                 ),
@@ -213,7 +205,8 @@ class _SignInPage extends State<SignInPage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const SignUpPage()));
+                                      builder: (context) =>
+                                          const SignUpPage()));
                             }))
                   ],
                 )
