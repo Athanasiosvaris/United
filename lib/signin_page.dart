@@ -81,51 +81,63 @@ class _SignInPage extends State<SignInPage> {
                 Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
-                  child: TextField(
-                    controller: nameController,
-                    decoration: InputDecoration(
-                        filled:
-                            true, //Gia na parei to fillColor prepei filled == true
+                  child: PhysicalModel(
+                    borderRadius: BorderRadius.circular(20.0),
+                    elevation: 10,
+                    color: const Color.fromARGB(255, 154, 130, 219),
+                    child: TextField(
+                      controller: nameController,
+                      decoration: InputDecoration(
+                        filled: true,
                         fillColor: const Color.fromARGB(255, 154, 130, 219),
-                        hintText: 'Username',
+                        hintText: 'Username or Email',
                         hintStyle: const TextStyle(color: Colors.black),
-                        disabledBorder: OutlineInputBorder(
+                        border: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                            width: 0,
+                            style: BorderStyle.none,
+                          ),
                           borderRadius: BorderRadius.circular(20.0),
                         ),
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20.0))),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  child: TextField(
-                    controller: passwordController,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      height: 5.0,
-                    ),
-                    decoration: InputDecoration(
-                      filled:
-                          true, //Gia na parei to fillColor prepei filled == true
-                      // ignore: prefer_const_constructors
-                      fillColor: Color.fromARGB(255, 255, 255, 255),
-                      hintText: 'Password',
-                      hintStyle: const TextStyle(color: Colors.black),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20.0),
                       ),
                     ),
                   ),
                 ),
                 Container(
-                    padding: const EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(10),
+                  child: PhysicalModel(
+                    borderRadius: BorderRadius.circular(20.0),
+                    elevation: 10,
+                    color: Colors.white,
+                    child: TextField(
+                      controller: passwordController,
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        filled:
+                            true, //Gia na parei to fillColor prepei filled == true
+                        // ignore: prefer_const_constructors
+                        fillColor: Color.fromARGB(255, 255, 255, 255),
+                        hintText: 'Password',
+                        hintStyle: const TextStyle(
+                            color: Colors.black, fontWeight: FontWeight.normal),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                          borderSide: const BorderSide(
+                              width: 0, style: BorderStyle.none),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                    padding: const EdgeInsets.fromLTRB(20, 20, 10, 5),
                     child: const Text(
                       'Forgot your password?',
                       style: TextStyle(fontSize: 15),
                     )),
                 Row(children: <Widget>[
                   Container(
-                    padding: const EdgeInsets.all(5),
+                    padding: const EdgeInsets.fromLTRB(20, 5, 10, 5),
                     child: const Text(
                       'Don`t have an account? Click',
                       style: TextStyle(fontSize: 15),
@@ -152,52 +164,51 @@ class _SignInPage extends State<SignInPage> {
                     ),
                   ),
                 ]),
-                const SizedBox(
-                  //Etsi vazo empty space
-                  height: 70,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Container(
-                        height: 50,
-                        width: 200,
-                        padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                Container(
+                  padding: const EdgeInsets.fromLTRB(20, 40, 20, 40),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Expanded(
+                          child: Container(
+                        alignment: Alignment.centerLeft,
+                        height: 80,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                shape:
-                                    // ignore: prefer_const_constructors
-                                    StadiumBorder(), //Etsi kano to button rechtangle with circular
+                                fixedSize: const Size(200, 60),
+                                elevation: 5,
+                                shape: const StadiumBorder(),
                                 backgroundColor:
-                                    const Color.fromARGB(238, 157, 61, 206)),
+                                    const Color.fromARGB(255, 89, 61, 167)),
                             child: const Text(
                               'Back',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
+                                fontSize: 20,
                                 color: Colors.white,
                               ),
                             ),
                             onPressed: () {
-                              Navigator.pop(context); // Etsi pao piso
-                            })),
-                    Container(
-                      height: 50,
-                      width: 100,
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      color: const Color.fromARGB(255, 240, 220, 220),
-                    ),
-                    Container(
-                        height: 50,
-                        width: 200,
-                        padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                              Navigator.pop(context);
+                            }),
+                      )),
+                      Expanded(
+                          child: Container(
+                        alignment: Alignment.centerRight,
+                        height: 80,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
+                                fixedSize: const Size(200, 60),
+                                elevation: 5,
                                 shape:
                                     const StadiumBorder(), //Etsi kano to button rechtangle with circular
                                 backgroundColor:
-                                    const Color.fromARGB(238, 157, 61, 206)),
+                                    const Color.fromARGB(255, 89, 61, 167)),
                             child: const Text(
                               'Next',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
+                                fontSize: 20,
                                 color: Colors.white,
                               ),
                             ),
@@ -207,8 +218,10 @@ class _SignInPage extends State<SignInPage> {
                                   MaterialPageRoute(
                                       builder: (context) =>
                                           const SignUpPage()));
-                            }))
-                  ],
+                            }),
+                      ))
+                    ],
+                  ),
                 )
               ],
             )));
