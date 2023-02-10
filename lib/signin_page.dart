@@ -80,7 +80,7 @@ class _SignInPage extends State<SignInPage> {
                 ),
                 Container(
                   alignment: Alignment.center,
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                   child: PhysicalModel(
                     borderRadius: BorderRadius.circular(20.0),
                     elevation: 10,
@@ -104,7 +104,7 @@ class _SignInPage extends State<SignInPage> {
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                   child: PhysicalModel(
                     borderRadius: BorderRadius.circular(20.0),
                     elevation: 10,

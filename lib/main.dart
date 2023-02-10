@@ -123,7 +123,7 @@ class _Firstscreen extends State<Firstscreen> {
                         style: ElevatedButton.styleFrom(
                             elevation: 5,
                             shape:
-                                const StadiumBorder(),
+                                const StadiumBorder(), //Etsi kano to button rechtangle with circular
                             backgroundColor:
                                 const Color.fromARGB(255, 255, 255, 255)),
                         child: const Text(
