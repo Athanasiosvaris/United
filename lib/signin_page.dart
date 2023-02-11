@@ -84,12 +84,12 @@ class _SignInPage extends State<SignInPage> {
                   child: PhysicalModel(
                     borderRadius: BorderRadius.circular(20.0),
                     elevation: 10,
-                    color: const Color.fromARGB(255, 154, 130, 219),
+                    color: Colors.white,
                     child: TextField(
                       controller: nameController,
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: const Color.fromARGB(255, 154, 130, 219),
+                        fillColor: Colors.white,
                         hintText: 'Username or Email',
                         hintStyle: const TextStyle(color: Colors.black),
                         border: OutlineInputBorder(
