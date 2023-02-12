@@ -81,50 +81,70 @@ class _SignInPage extends State<SignInPage> {
                 Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                  child: PhysicalModel(
+                  child: Material(
                     borderRadius: BorderRadius.circular(20.0),
-                    elevation: 10,
                     color: Colors.white,
+                    elevation: 10,
                     child: TextField(
-                      controller: nameController,
+                      controller: passwordController,
+                      showCursor: true,
+                      cursorColor: Colors.black,
+                      style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.black),
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
                         hintText: 'Username or Email',
-                        hintStyle: const TextStyle(color: Colors.black),
                         border: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                            width: 0,
-                            style: BorderStyle.none,
-                          ),
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
+                            borderSide: const BorderSide(
+                              width: 0,
+                              style: BorderStyle.none,
+                            ),
+                            borderRadius: BorderRadius.circular(20.0)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20.0)),
+                        hintStyle: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.black38),
                       ),
                     ),
                   ),
                 ),
                 Container(
+                  alignment: Alignment.center,
                   padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                  child: PhysicalModel(
+                  child: Material(
                     borderRadius: BorderRadius.circular(20.0),
-                    elevation: 10,
                     color: Colors.white,
+                    elevation: 10,
                     child: TextField(
                       controller: passwordController,
+                      cursorColor: Colors.black,
                       obscureText: true,
+                      obscuringCharacter: '*',
+                      style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.black),
                       decoration: InputDecoration(
-                        filled:
-                            true, //Gia na parei to fillColor prepei filled == true
-                        // ignore: prefer_const_constructors
-                        fillColor: Color.fromARGB(255, 255, 255, 255),
+                        filled: true,
+                        fillColor: Colors.white,
                         hintText: 'Password',
-                        hintStyle: const TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.normal),
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20.0),
-                          borderSide: const BorderSide(
-                              width: 0, style: BorderStyle.none),
-                        ),
+                            borderSide: const BorderSide(
+                              width: 0,
+                              style: BorderStyle.none,
+                            ),
+                            borderRadius: BorderRadius.circular(20.0)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20.0)),
+                        hintStyle: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.black38),
                       ),
                     ),
                   ),

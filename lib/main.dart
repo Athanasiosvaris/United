@@ -100,7 +100,7 @@ class _Firstscreen extends State<Firstscreen> {
                           elevation: 5,
                           shape: const StadiumBorder(),
                           backgroundColor:
-                              const Color.fromARGB(255, 154, 130, 219)),
+                              const Color.fromARGB(255, 89, 61, 167)),
                       child: const Text(
                         'Sign Up',
                         textAlign: TextAlign.center,

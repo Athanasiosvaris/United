@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:united/signin_page.dart';
+import 'package:united/signup_interests.dart';
+import 'package:united/main.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPage extends State<SignUpPage> {
-  int? sex_choice = 0;
+  int? sexChoice = 0;
   List<String> sex = ["Male", "Female"];
   var university;
   List<String> universities = <String>[
@@ -66,52 +67,61 @@ class _SignUpPage extends State<SignUpPage> {
                         fontSize: 20),
                   )),
               Container(
-                padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                padding: const EdgeInsets.fromLTRB(20, 40, 20, 10),
                 alignment: Alignment.center,
-                child: Row(children: <Widget>[
-                  Wrap(
-                    spacing: 5.0,
-                    children: List<Widget>.generate(
-                      2,
-                      (int index) {
-                        return ChoiceChip(
-                          label: Text(sex[index]),
-                          selected: sex_choice == index,
-                          elevation: 10,
-                          selectedColor:
-                              const Color.fromARGB(255, 227, 199, 240),
-                          onSelected: (bool selected) {
-                            setState(() {
-                              sex_choice = selected ? index : null;
-                            });
-                          },
-                        );
-                      },
-                    ).toList(),
-                  ),
-                ]),
+                child: Wrap(
+                  spacing: 5.0,
+                  children: List<Widget>.generate(
+                    2,
+                    (int index) {
+                      return ChoiceChip(
+                        label: Text(
+                            style: const TextStyle(fontSize: 20), sex[index]),
+                        selected: sexChoice == index,
+                        elevation: 10,
+                        selectedColor: const Color.fromARGB(255, 227, 199, 240),
+                        backgroundColor: Colors.white,
+                        onSelected: (bool selected) {
+                          setState(() {
+                            sexChoice = selected ? index : null;
+                          });
+                        },
+                      );
+                    },
+                  ).toList(),
+                ),
               ),
               Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                child: PhysicalModel(
+                child: Material(
                   borderRadius: BorderRadius.circular(20.0),
-                  elevation: 10,
                   color: Colors.white,
+                  elevation: 10,
                   child: TextField(
                     controller: nameController,
+                    showCursor: true,
+                    cursorColor: Colors.black,
+                    style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.black),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                      hintText: 'Enter your full name',
-                      hintStyle: const TextStyle(color: Colors.black),
+                      hintText: 'Enter you full name',
                       border: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                          width: 0,
-                          style: BorderStyle.none,
-                        ),
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
+                          borderSide: const BorderSide(
+                            width: 0,
+                            style: BorderStyle.none,
+                          ),
+                          borderRadius: BorderRadius.circular(20.0)),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0)),
+                      hintStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.black38),
                     ),
                   ),
                 ),
@@ -119,24 +129,34 @@ class _SignUpPage extends State<SignUpPage> {
               Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                child: PhysicalModel(
+                child: Material(
                   borderRadius: BorderRadius.circular(20.0),
-                  elevation: 10,
                   color: Colors.white,
+                  elevation: 10,
                   child: TextField(
                     controller: usernameController,
+                    showCursor: true,
+                    cursorColor: Colors.black,
+                    style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.black),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
                       hintText: 'Enter your username',
-                      hintStyle: const TextStyle(color: Colors.black),
                       border: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                          width: 0,
-                          style: BorderStyle.none,
-                        ),
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
+                          borderSide: const BorderSide(
+                            width: 0,
+                            style: BorderStyle.none,
+                          ),
+                          borderRadius: BorderRadius.circular(20.0)),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0)),
+                      hintStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.black38),
                     ),
                   ),
                 ),
@@ -144,24 +164,34 @@ class _SignUpPage extends State<SignUpPage> {
               Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                child: PhysicalModel(
+                child: Material(
                   borderRadius: BorderRadius.circular(20.0),
-                  elevation: 10,
                   color: Colors.white,
+                  elevation: 10,
                   child: TextField(
                     controller: emailController,
+                    showCursor: true,
+                    cursorColor: Colors.black,
+                    style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.black),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
                       hintText: 'Enter your email',
-                      hintStyle: const TextStyle(color: Colors.black),
                       border: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                          width: 0,
-                          style: BorderStyle.none,
-                        ),
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
+                          borderSide: const BorderSide(
+                            width: 0,
+                            style: BorderStyle.none,
+                          ),
+                          borderRadius: BorderRadius.circular(20.0)),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0)),
+                      hintStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.black38),
                     ),
                   ),
                 ),
@@ -169,25 +199,36 @@ class _SignUpPage extends State<SignUpPage> {
               Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                child: PhysicalModel(
+                child: Material(
                   borderRadius: BorderRadius.circular(20.0),
-                  elevation: 10,
                   color: Colors.white,
+                  elevation: 10,
                   child: TextField(
                     controller: passwordController,
                     obscureText: true,
+                    obscuringCharacter: '*',
+                    showCursor: true,
+                    cursorColor: Colors.black,
+                    style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.black),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
                       hintText: 'Enter your password',
-                      hintStyle: const TextStyle(color: Colors.black),
                       border: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                          width: 0,
-                          style: BorderStyle.none,
-                        ),
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
+                          borderSide: const BorderSide(
+                            width: 0,
+                            style: BorderStyle.none,
+                          ),
+                          borderRadius: BorderRadius.circular(20.0)),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0)),
+                      hintStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.black38),
                     ),
                   ),
                 ),
@@ -195,20 +236,28 @@ class _SignUpPage extends State<SignUpPage> {
               Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                child: Container(
-                  padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: Colors.white,
-                  ),
+                child: Material(
+                  color: Colors.white,
+                  elevation: 10,
+                  borderRadius: BorderRadius.circular(20.0),
                   child: DropdownButton<String>(
                     isExpanded: true,
                     value: university,
+                    underline: const SizedBox(), // to remove underline
                     hint: const Text(
+                      textAlign: TextAlign.start,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.black38,
+                      ),
                       'Choose your university',
                     ),
                     elevation: 10,
-                    style: const TextStyle(color: Colors.black),
+                    style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.black),
                     borderRadius: BorderRadius.circular(20.0),
                     onChanged: (value) {
                       setState(() {
@@ -250,7 +299,11 @@ class _SignUpPage extends State<SignUpPage> {
                                       ),
                                     ),
                                     onPressed: () {
-                                      Navigator.pop(context);
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const United()));
                                     }))),
                         Expanded(
                             child: Container(
@@ -277,7 +330,7 @@ class _SignUpPage extends State<SignUpPage> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const SignUpPage()));
+                                            const SignUpPageInterests()));
                               }),
                         ))
                       ]))
