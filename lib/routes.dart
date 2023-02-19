@@ -4,12 +4,14 @@ import 'package:united/pages/registration/signin/signin_page.dart';
 import 'package:united/pages/registration/signup/signup_page.dart';
 import 'package:united/pages/registration/signup/signup_interests.dart';
 import 'package:united/pages/registration/signup/signup_privacy.dart';
+import 'package:united/pages/app/app.dart';
 
 const String registration = '/registration';
 const String signin = '/registration/signin';
 const String signup = '/registration/signup';
-const String singupInterest = '/registration/singup/interests';
+const String signupInterests = '/registration/signup/interests';
 const String signupPrivacy = '/registration/signup/privacy';
+const String app = '/app';
 const String home = '/app/home';
 const String discover = '/app/discover';
 const String leaderboard = '/app/leaderboard';
@@ -27,6 +29,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const SignUpPageInterests());
     case '/registration/signup/privacy':
       return MaterialPageRoute(builder: (_) => const SignUpPagePrivacy());
+    case '/app':
+      return MaterialPageRoute(builder: (_) => const App());
     // case '/app/home':
     // return MaterialPageRoute(builder: (_) => const HomePage());
     // case '/app/discover':

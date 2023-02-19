@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:united/pages/app/home_page.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _App createState() => _App();
 }
 
 class _App extends State<App> {
   final _pages = const [
-    App(),
+    HomePage(),
     // DiscoverPage(),
     // LeaderBoardPage(),
     // ProfilePage()
@@ -19,14 +21,7 @@ class _App extends State<App> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 202, 196, 208),
-      appBar: AppBar(
-          automaticallyImplyLeading: false,
-          title: const Text('Welcome Dimitris',
-              style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white)),
-          backgroundColor: const Color.fromARGB(255, 89, 61, 167)),
+      
       body: _pages[currentPageIndex],
       bottomNavigationBar: NavigationBar(
           destinations: const <Widget>[
@@ -45,7 +40,7 @@ class _App extends State<App> {
           ],
           onDestinationSelected: (int index) {
             setState(() {
-             currentPageIndex = index;
+              currentPageIndex = index;
             });
           }),
     );

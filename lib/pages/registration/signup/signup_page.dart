@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:united/signup_interests.dart';
-import 'package:united/main.dart';
+
+import 'package:united/routes.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -298,11 +298,7 @@ class _SignUpPage extends State<SignUpPage> {
                                       ),
                                     ),
                                     onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const United()));
+                                      Navigator.pop(context);
                                     }))),
                         Expanded(
                             child: Container(
@@ -325,11 +321,7 @@ class _SignUpPage extends State<SignUpPage> {
                                 ),
                               ),
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const SignUpPageInterests()));
+                                Navigator.pushNamed(context, signupInterests);
                               }),
                         ))
                       ]))

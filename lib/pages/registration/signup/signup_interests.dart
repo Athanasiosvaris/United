@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:united/help_widgets/labeled_checkbox.dart';
-import 'package:united/signup_page.dart';
-import 'package:united/signup_privacy.dart';
+import 'package:united/routes.dart';
 
 class SignUpPageInterests extends StatefulWidget {
   const SignUpPageInterests({Key? key}) : super(key: key);
@@ -235,11 +234,7 @@ class _SignUpPageInterests extends State<SignUpPageInterests> {
                                       ),
                                     ),
                                     onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const SignUpPage()));
+                                      Navigator.pop(context);
                                     }))),
                         Expanded(
                             child: Container(
@@ -262,11 +257,7 @@ class _SignUpPageInterests extends State<SignUpPageInterests> {
                                 ),
                               ),
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const SignUpPagePrivacy()));
+                                Navigator.pushNamed(context, signupPrivacy);
                               }),
                         ))
                       ]))

@@ -22,6 +22,7 @@ class United extends StatelessWidget {
             backgroundColor: Color.fromARGB(255, 73, 69, 79),
             elevation: 10),
       ),
+      onGenerateRoute: routes.generateRoute,
       initialRoute: routes.registration,
       debugShowCheckedModeBanner: false,
     );

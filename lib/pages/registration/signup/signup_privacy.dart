@@ -204,7 +204,7 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                                       ),
                                     ),
                                     onPressed: () {
-                                      Navigator.pushNamed(context, registration);
+                                      Navigator.pushNamed(context, app);
                                     })))
                       ]))
             ])));

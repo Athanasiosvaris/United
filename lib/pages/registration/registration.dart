@@ -5,6 +5,7 @@ class Registration extends StatefulWidget {
   const Registration({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _Registration createState() => _Registration();
 }
 
@@ -80,8 +81,7 @@ class _Registration extends State<Registration> {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(
-                            context, signup);
+                        Navigator.pushNamed(context, signup);
                       },
                     )),
                 Container(
@@ -103,9 +103,7 @@ class _Registration extends State<Registration> {
                           ),
                         ),
                         onPressed: () {
-                          Navigator.pushNamed(
-                              context,
-                              signin);
+                          Navigator.pushNamed(context, signin);
                         })),
               ],
             )));
