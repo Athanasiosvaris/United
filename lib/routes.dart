@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:united/pages/app/leaderboard_maths.dart';
 import 'package:united/pages/registration/registration.dart';
 import 'package:united/pages/registration/signin/signin_page.dart';
 import 'package:united/pages/registration/signup/signup_page.dart';
@@ -35,8 +36,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     // return MaterialPageRoute(builder: (_) => const HomePage());
     // case '/app/discover':
     // return MaterialPageRoute(builder: (_) => const DiscoverPage());
-    // case '/app/leaderboard':
-    // return MaterialPageRoute(builder: (_) => const LeaderboardPage());
+    case '/app/leaderboard':
+     return MaterialPageRoute(builder: (_) => const leaderboard_maths());
     // case '/app/profile':
     // return MaterialPageRoute(builder: (_) => const ProfilePage());
     default:
