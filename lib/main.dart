@@ -85,19 +85,6 @@ class _Firstscreen extends State<Firstscreen> {
                       'Designed by students for students!',
                       style: TextStyle(fontSize: 20),
                     )),
-<<<<<<< HEAD
-                SizedBox(
-                  // Etsi vazo empty space??sdasas
-                  height: 100,
-                ),
-                Image.asset(
-                  'assets/images/uni.png',
-                  height: 100.0,
-                ),
-                SizedBox(
-                  //Etsi vazo empty space
-                  height: 100,
-=======
                 Container(
                   height: 300.00,
                   alignment: Alignment.center,
@@ -106,7 +93,6 @@ class _Firstscreen extends State<Firstscreen> {
                     Icons.house,
                     size: 150,
                   ),
->>>>>>> dimitris
                 ),
                 Container(
                     height: 80,
