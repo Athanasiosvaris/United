@@ -15,7 +15,7 @@ class United extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      /// Τίτλος της εφαρμογής μας
+      /// That is title of the app
       title: 'United',
 
       /// To thema ths efarmogis mas
@@ -85,6 +85,18 @@ class _Firstscreen extends State<Firstscreen> {
                       'Designed by students for students!',
                       style: TextStyle(fontSize: 20),
                     )),
+                SizedBox(
+                  //Etsi vazo empty space
+                  height: 100,
+                ),
+                Image.asset(
+                  'assets/images/uni.png',
+                  height: 100.0,
+                ),
+                const SizedBox(
+                  //Etsi vazo empty space
+                  height: 100,
+                ),
                 Container(
                   height: 300.00,
                   alignment: Alignment.center,
