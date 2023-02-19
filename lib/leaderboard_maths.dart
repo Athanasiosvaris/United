@@ -13,6 +13,8 @@ class leaderboard_maths extends StatefulWidget {
 }
 
 class _leaderboard_maths extends State<leaderboard_maths> {
+  int? sexChoice = 0;
+  List<String> sex = ["Maths", "Physics", "Chem", "Coding"];
   // final nameController = TextEditingController();
   // final passwordController = TextEditingController();
 
@@ -89,6 +91,31 @@ class _leaderboard_maths extends State<leaderboard_maths> {
               Divider(
                 color: Colors.black,
                 thickness: 2,
+              ),
+              Container(
+                padding: const EdgeInsets.fromLTRB(20, 40, 20, 10),
+                alignment: Alignment.center,
+                child: Wrap(
+                  spacing: 5.0,
+                  children: List<Widget>.generate(
+                    4,
+                    (int index) {
+                      return ChoiceChip(
+                        label: Text(
+                            style: const TextStyle(fontSize: 20), sex[index]),
+                        selected: sexChoice == index,
+                        elevation: 10,
+                        selectedColor: const Color.fromARGB(255, 227, 199, 240),
+                        backgroundColor: Colors.white,
+                        onSelected: (bool selected) {
+                          setState(() {
+                            sexChoice = selected ? index : null;
+                          });
+                        },
+                      );
+                    },
+                  ).toList(),
+                ),
               ),
               const SizedBox(
                 //Etsi vazo empty space
