@@ -22,7 +22,7 @@ class United extends StatelessWidget {
       // theme: ThemeData(primarySwatch: Colors.amber),
       theme: ThemeData().copyWith(
           colorScheme: ThemeData().colorScheme.copyWith(
-                primary: const Color.fromARGB(255, 240, 220, 220),
+                primary: const Color.fromARGB(255, 202, 196, 208),
               )),
 
       /// Arxikopoihsh ths arxikis thonis ths efarmogis mas (TaskListScreen)
@@ -36,6 +36,7 @@ class Firstscreen extends StatefulWidget {
   const Firstscreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _Firstscreen createState() => _Firstscreen();
 }
 
@@ -43,7 +44,7 @@ class _Firstscreen extends State<Firstscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 240, 220, 220),
+        backgroundColor: const Color.fromARGB(255, 202, 196, 208),
 
         // ignore: prefer_const_constructors
         body: Padding(
@@ -52,7 +53,7 @@ class _Firstscreen extends State<Firstscreen> {
               children: <Widget>[
                 const SizedBox(
                   //Etsi vazo empty space
-                  height: 50,
+                  height: 50.00,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -60,7 +61,7 @@ class _Firstscreen extends State<Firstscreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Container(
-                      height: 50,
+                      height: 50.00,
                       alignment: Alignment.center,
                       padding: const EdgeInsets.all(10),
                       child: const Text(
@@ -84,6 +85,7 @@ class _Firstscreen extends State<Firstscreen> {
                       'Designed by students for students!',
                       style: TextStyle(fontSize: 20),
                     )),
+<<<<<<< HEAD
                 SizedBox(
                   //Etsi vazo empty space
                   height: 100,
@@ -95,18 +97,31 @@ class _Firstscreen extends State<Firstscreen> {
                 const SizedBox(
                   //Etsi vazo empty space
                   height: 100,
+=======
+                Container(
+                  height: 300.00,
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(10),
+                  child: const Icon(
+                    Icons.house,
+                    size: 150,
+                  ),
+>>>>>>> 7a8d3ab35393347e884d7d2aa761ef16a4e65d00
                 ),
                 Container(
-                    height: 50,
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    height: 80,
+                    padding: const EdgeInsets.all(10),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                          elevation: 5,
                           shape: const StadiumBorder(),
                           backgroundColor:
-                              const Color.fromARGB(238, 157, 61, 206)),
+                              const Color.fromARGB(255, 89, 61, 167)),
                       child: const Text(
                         'Sign Up',
+                        textAlign: TextAlign.center,
                         style: TextStyle(
+                          fontSize: 20,
                           color: Colors.white,
                         ),
                       ),
@@ -117,22 +132,21 @@ class _Firstscreen extends State<Firstscreen> {
                                 builder: (context) => const SignUpPage()));
                       },
                     )),
-                const SizedBox(
-                  //Etsi vazo empty space
-                  height: 20,
-                ),
                 Container(
-                    height: 50,
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    height: 80,
+                    padding: const EdgeInsets.all(10),
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
+                            elevation: 5,
                             shape:
                                 const StadiumBorder(), //Etsi kano to button rechtangle with circular
                             backgroundColor:
                                 const Color.fromARGB(255, 255, 255, 255)),
                         child: const Text(
                           'Sign In',
+                          textAlign: TextAlign.center,
                           style: TextStyle(
+                            fontSize: 20,
                             color: Colors.black,
                           ),
                         ),
