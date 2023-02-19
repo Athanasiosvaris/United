@@ -150,14 +150,14 @@ class _SignInPage extends State<SignInPage> {
                   ),
                 ),
                 Container(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 10, 5),
+                    padding: const EdgeInsets.fromLTRB(30, 20, 10, 5),
                     child: const Text(
                       'Forgot your password?',
                       style: TextStyle(fontSize: 15),
                     )),
                 Row(children: <Widget>[
                   Container(
-                    padding: const EdgeInsets.fromLTRB(20, 5, 10, 5),
+                    padding: const EdgeInsets.fromLTRB(30, 5, 10, 5),
                     child: const Text(
                       'Don`t have an account? Click',
                       style: TextStyle(fontSize: 15),

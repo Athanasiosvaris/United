@@ -245,7 +245,6 @@ class _SignUpPage extends State<SignUpPage> {
                     value: university,
                     underline: const SizedBox(), // to remove underline
                     hint: const Text(
-                      textAlign: TextAlign.start,
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.normal,

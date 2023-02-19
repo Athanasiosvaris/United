@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:united/help_widgets/labeled_checkbox.dart';
+import 'package:united/home_page.dart';
 
 class SignUpPagePrivacy extends StatefulWidget {
   const SignUpPagePrivacy({Key? key}) : super(key: key);
@@ -206,7 +207,7 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const SignUpPagePrivacy()));
+                                            const HomePage()));
                               }),
                         ))
                       ]))
