@@ -85,7 +85,6 @@ class _Firstscreen extends State<Firstscreen> {
                       'Designed by students for students!',
                       style: TextStyle(fontSize: 20),
                     )),
-<<<<<<< HEAD
                 SizedBox(
                   //Etsi vazo empty space
                   height: 100,
@@ -97,7 +96,7 @@ class _Firstscreen extends State<Firstscreen> {
                 const SizedBox(
                   //Etsi vazo empty space
                   height: 100,
-=======
+                ),
                 Container(
                   height: 300.00,
                   alignment: Alignment.center,
@@ -106,7 +105,6 @@ class _Firstscreen extends State<Firstscreen> {
                     Icons.house,
                     size: 150,
                   ),
->>>>>>> 7a8d3ab35393347e884d7d2aa761ef16a4e65d00
                 ),
                 Container(
                     height: 80,
