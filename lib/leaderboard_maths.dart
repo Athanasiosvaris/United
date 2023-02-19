@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:united/signup_page.dart';
+import 'package:united/pages/registration/signup/signup_page.dart';
 
 //TextEditingController nameController = TextEditingController();
 //TextEditingController passwordController = TextEditingController();

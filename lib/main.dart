@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:united/signin_page.dart';
-import 'package:united/signup_page.dart';
-import 'package:united/leaderboard_maths.dart';
+import 'routes.dart' as routes;
 
 void main() {
   runApp(const United());
@@ -10,163 +8,23 @@ void main() {
 class United extends StatelessWidget {
   const United({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      /// That is title of the app
       title: 'United',
-
-      /// To thema ths efarmogis mas
-      // theme: ThemeData(primarySwatch: Colors.amber),
       theme: ThemeData().copyWith(
-          colorScheme: ThemeData().colorScheme.copyWith(
-                primary: const Color.fromARGB(255, 202, 196, 208),
-              )),
-
-      /// Arxikopoihsh ths arxikis thonis ths efarmogis mas (TaskListScreen)
-      home: const Firstscreen(),
+        colorScheme: ThemeData().colorScheme.copyWith(
+              primary: const Color.fromARGB(255, 202, 196, 208),
+            ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+            unselectedIconTheme: IconThemeData(color: Colors.white60),
+            unselectedLabelStyle: TextStyle(color: Colors.white60),
+            backgroundColor: Color.fromARGB(255, 73, 69, 79),
+            elevation: 10),
+      ),
+      onGenerateRoute: routes.generateRoute,
+      initialRoute: routes.registration,
+      debugShowCheckedModeBanner: false,
     );
-  }
-}
-
-/// Ylopoihsh tis othonis Firstscreen san [StatefulWidget]
-class Firstscreen extends StatefulWidget {
-  const Firstscreen({Key? key}) : super(key: key);
-
-  @override
-  // ignore: library_private_types_in_public_api
-  _Firstscreen createState() => _Firstscreen();
-}
-
-class _Firstscreen extends State<Firstscreen> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 202, 196, 208),
-
-        // ignore: prefer_const_constructors
-        body: Padding(
-            padding: const EdgeInsets.all(10),
-            child: ListView(
-              children: <Widget>[
-                const SizedBox(
-                  //Etsi vazo empty space
-                  height: 50.00,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  //Center Row contents horizontally
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      height: 50.00,
-                      alignment: Alignment.center,
-                      padding: const EdgeInsets.all(10),
-                      child: const Text(
-                        'UNI-TED',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 30),
-                      ),
-                    ),
-                    const Icon(
-                      Icons.school_outlined,
-                      size: 40,
-                    ),
-                  ],
-                ),
-                Container(
-                    alignment: Alignment.center,
-                    padding: const EdgeInsets.all(10),
-                    child: const Text(
-                      'Designed by students for students!',
-                      style: TextStyle(fontSize: 20),
-                    )),
-                Container(
-                  height: 300.00,
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(10),
-                  child: const Icon(
-                    Icons.house,
-                    size: 150,
-                  ),
-                ),
-                Container(
-                    height: 80,
-                    padding: const EdgeInsets.all(10),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          elevation: 5,
-                          shape: const StadiumBorder(),
-                          backgroundColor:
-                              const Color.fromARGB(255, 89, 61, 167)),
-                      child: const Text(
-                        'Sign Up',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const SignUpPage()));
-                      },
-                    )),
-                Container(
-                    height: 80,
-                    padding: const EdgeInsets.all(10),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          elevation: 5,
-                          shape: const StadiumBorder(),
-                          backgroundColor:
-                              const Color.fromARGB(255, 89, 61, 167)),
-                      child: const Text(
-                        'Leaderboard_maths_temporary button',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const leaderboard_maths()));
-                      },
-                    )),
-                Container(
-                    height: 80,
-                    padding: const EdgeInsets.all(10),
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            elevation: 5,
-                            shape:
-                                const StadiumBorder(), //Etsi kano to button rechtangle with circular
-                            backgroundColor:
-                                const Color.fromARGB(255, 255, 255, 255)),
-                        child: const Text(
-                          'Sign In',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black,
-                          ),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const SignInPage()));
-                        })),
-              ],
-            )));
   }
 }

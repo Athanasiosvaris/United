@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:united/signup_page.dart';
+import 'package:united/routes.dart';
 
 TextEditingController nameController = TextEditingController();
 TextEditingController passwordController = TextEditingController();
@@ -169,10 +169,7 @@ class _SignInPage extends State<SignInPage> {
                       textStyle: const TextStyle(fontSize: 15),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SignUpPage()));
+                      Navigator.pop(context);
                     },
                     child: const Text('here'),
                   ),
@@ -233,11 +230,7 @@ class _SignInPage extends State<SignInPage> {
                               ),
                             ),
                             onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SignUpPage()));
+                              Navigator.pushNamed(context, app);
                             }),
                       ))
                     ],
