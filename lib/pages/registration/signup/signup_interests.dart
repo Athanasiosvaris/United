@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:united/help_widgets/labeled_checkbox.dart';
-import 'package:united/home_page.dart';
+import 'package:united/routes.dart';
 
-class SignUpPagePrivacy extends StatefulWidget {
-  const SignUpPagePrivacy({Key? key}) : super(key: key);
+class SignUpPageInterests extends StatefulWidget {
+  const SignUpPageInterests({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _SignUpPagePrivacy createState() => _SignUpPagePrivacy();
+  _SignUpPageInterests createState() => _SignUpPageInterests();
 }
 
-class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
-  bool grades = false;
-  bool news = false;
-  bool messages = false;
-  bool courses = false;
-  bool trackOn = false;
-  bool trackOff = false;
+class _SignUpPageInterests extends State<SignUpPageInterests> {
+  bool math = false;
+  bool physics = false;
+  bool chemistry = false;
+  bool computerScience = false;
+  bool biology = false;
+  bool economics = false;
+  bool law = false;
+  bool artHumanities = false;
+  bool medicine = false;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +43,7 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                   height: 40,
                   alignment: Alignment.center,
                   child: const Text(
-                    'Your privacy matters',
+                    'Mark the subjects of your interest',
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w500,
@@ -56,13 +59,13 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                         topRight: Radius.circular(20.0)),
                     color: Colors.white,
                     child: LabeledCheckbox(
-                      icon: Icons.grade,
-                      label: 'Grades from your university',
+                      icon: Icons.calculate,
+                      label: 'Math',
                       padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: grades,
+                      value: math,
                       onChanged: (bool newValue) {
                         setState(() {
-                          grades = true;
+                          math = true;
                         });
                       },
                     ),
@@ -73,13 +76,13 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                   child: Material(
                     color: Colors.white,
                     child: LabeledCheckbox(
-                      icon: Icons.newspaper,
-                      label: 'News & Updates from regarding your courses',
+                      icon: Icons.public,
+                      label: 'Physics',
                       padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: news,
+                      value: physics,
                       onChanged: (bool newValue) {
                         setState(() {
-                          news = true;
+                          physics = true;
                         });
                       },
                     ),
@@ -90,13 +93,13 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                   child: Material(
                     color: Colors.white,
                     child: LabeledCheckbox(
-                      icon: Icons.message,
-                      label: 'Messages from friends',
+                      icon: Icons.science,
+                      label: 'Chemistry',
                       padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: messages,
+                      value: chemistry,
                       onChanged: (bool newValue) {
                         setState(() {
-                          messages = true;
+                          chemistry = true;
                         });
                       },
                     ),
@@ -107,13 +110,13 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                   child: Material(
                     color: Colors.white,
                     child: LabeledCheckbox(
-                      icon: Icons.play_lesson,
-                      label: 'Courses updates',
+                      icon: Icons.computer,
+                      label: 'Computer Science',
                       padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: courses,
+                      value: computerScience,
                       onChanged: (bool newValue) {
                         setState(() {
-                          courses = true;
+                          computerScience = true;
                         });
                       },
                     ),
@@ -124,13 +127,64 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                   child: Material(
                     color: Colors.white,
                     child: LabeledCheckbox(
-                      icon: Icons.circle,
-                      label: 'Track me while on app',
+                      icon: Icons.biotech,
+                      label: 'Biology',
                       padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: trackOn,
+                      value: biology,
                       onChanged: (bool newValue) {
                         setState(() {
-                          trackOff = true;
+                          biology = true;
+                        });
+                      },
+                    ),
+                  )),
+              Container(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  alignment: Alignment.center,
+                  child: Material(
+                    color: Colors.white,
+                    child: LabeledCheckbox(
+                      icon: Icons.euro,
+                      label: 'Economics',
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      value: economics,
+                      onChanged: (bool newValue) {
+                        setState(() {
+                          economics = true;
+                        });
+                      },
+                    ),
+                  )),
+              Container(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  alignment: Alignment.center,
+                  child: Material(
+                    color: Colors.white,
+                    child: LabeledCheckbox(
+                      icon: Icons.gavel,
+                      label: 'Law',
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      value: law,
+                      onChanged: (bool newValue) {
+                        setState(() {
+                          law = true;
+                        });
+                      },
+                    ),
+                  )),
+              Container(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  alignment: Alignment.center,
+                  child: Material(
+                    color: Colors.white,
+                    child: LabeledCheckbox(
+                      icon: Icons.theaters,
+                      label: 'Art & Humanities',
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      value: artHumanities,
+                      onChanged: (bool newValue) {
+                        setState(() {
+                          artHumanities = true;
                         });
                       },
                     ),
@@ -144,13 +198,13 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                         bottomRight: Radius.circular(20.0)),
                     color: Colors.white,
                     child: LabeledCheckbox(
-                      icon: Icons.circle_outlined,
-                      label: 'Track me while off app',
+                      icon: Icons.medical_services,
+                      label: 'Medicine',
                       padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: trackOff,
+                      value: medicine,
                       onChanged: (bool newValue) {
                         setState(() {
-                          trackOff = true;
+                          medicine = true;
                         });
                       },
                     ),
@@ -203,11 +257,7 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                                 ),
                               ),
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const HomePage()));
+                                Navigator.pushNamed(context, signupPrivacy);
                               }),
                         ))
                       ]))
