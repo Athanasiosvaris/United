@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:united/help_widgets/labeled_checkbox.dart';
-import 'package:united/home_page.dart';
+
+import 'package:united/routes.dart';
 
 class SignUpPagePrivacy extends StatefulWidget {
   const SignUpPagePrivacy({Key? key}) : super(key: key);
@@ -184,32 +185,27 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                                     }))),
                         Expanded(
                             child: Container(
-                          alignment: Alignment.centerRight,
-                          height: 80,
-                          child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  fixedSize: const Size(200, 60),
-                                  elevation: 10,
-                                  shape:
-                                      const StadiumBorder(), //Etsi kano to button rechtangle with circular
-                                  backgroundColor:
-                                      const Color.fromARGB(255, 89, 61, 167)),
-                              child: const Text(
-                                'Next',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const HomePage()));
-                              }),
-                        ))
+                                alignment: Alignment.centerRight,
+                                height: 80,
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        fixedSize: const Size(200, 60),
+                                        elevation: 10,
+                                        shape:
+                                            const StadiumBorder(), //Etsi kano to button rechtangle with circular
+                                        backgroundColor: const Color.fromARGB(
+                                            255, 89, 61, 167)),
+                                    child: const Text(
+                                      'Next',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    onPressed: () {
+                                      Navigator.pushNamed(context, registration);
+                                    })))
                       ]))
             ])));
   }

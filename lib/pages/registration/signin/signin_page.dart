@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:united/signup_page.dart';
+import '../../app/app.dart';
 
 TextEditingController nameController = TextEditingController();
 TextEditingController passwordController = TextEditingController();
@@ -8,7 +8,6 @@ class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _SignInPage createState() => _SignInPage();
 }
 
@@ -169,10 +168,7 @@ class _SignInPage extends State<SignInPage> {
                       textStyle: const TextStyle(fontSize: 15),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SignUpPage()));
+                      Navigator.pop(context);
                     },
                     child: const Text('here'),
                   ),
@@ -236,8 +232,7 @@ class _SignInPage extends State<SignInPage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SignUpPage()));
+                                      builder: (context) => const App()));
                             }),
                       ))
                     ],
