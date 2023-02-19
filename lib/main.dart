@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:united/signin_page.dart';
 import 'package:united/signup_page.dart';
-//Evala 1 sxolio
-// 2 sxolio
+import 'package:united/leaderboard_maths.dart';
 
 void main() {
   runApp(const United());
@@ -85,18 +84,6 @@ class _Firstscreen extends State<Firstscreen> {
                       'Designed by students for students!',
                       style: TextStyle(fontSize: 20),
                     )),
-                SizedBox(
-                  //Etsi vazo empty space
-                  height: 100,
-                ),
-                Image.asset(
-                  'assets/images/uni.png',
-                  height: 100.0,
-                ),
-                const SizedBox(
-                  //Etsi vazo empty space
-                  height: 100,
-                ),
                 Container(
                   height: 300.00,
                   alignment: Alignment.center,
@@ -128,6 +115,31 @@ class _Firstscreen extends State<Firstscreen> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => const SignUpPage()));
+                      },
+                    )),
+                Container(
+                    height: 80,
+                    padding: const EdgeInsets.all(10),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          elevation: 5,
+                          shape: const StadiumBorder(),
+                          backgroundColor:
+                              const Color.fromARGB(255, 89, 61, 167)),
+                      child: const Text(
+                        'Leaderboard_maths_temporary button',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const leaderboard_maths()));
                       },
                     )),
                 Container(
