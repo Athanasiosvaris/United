@@ -25,6 +25,7 @@ class _App extends State<App> {
       backgroundColor: const Color.fromARGB(255, 202, 196, 208),
       body: _pages[currentPageIndex],
       bottomNavigationBar: NavigationBar(
+          backgroundColor: Color.fromARGB(83, 122, 122, 122),
           destinations: const <Widget>[
             NavigationDestination(label: 'Home', icon: Icon(Icons.home)),
             NavigationDestination(label: 'Discover', icon: Icon(Icons.explore)),
