@@ -15,7 +15,7 @@ class United extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      /// Τίτλος της εφαρμογής μας
+      /// That is title of the app
       title: 'United',
 
       /// To thema ths efarmogis mas
