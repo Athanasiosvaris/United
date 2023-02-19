@@ -6,15 +6,15 @@ import 'package:united/pages/app/home_page.dart';
 
 import 'package:united/pages/app/discover_page.dart';
 
-class leaderboard_maths extends StatefulWidget {
-  const leaderboard_maths({Key? key}) : super(key: key);
+class leaderboard_physics extends StatefulWidget {
+  const leaderboard_physics({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _leaderboard_maths createState() => _leaderboard_maths();
+  _leaderboard_physics createState() => _leaderboard_physics();
 }
 
-class _leaderboard_maths extends State<leaderboard_maths> {
+class _leaderboard_physics extends State<leaderboard_physics> {
   int? sexChoice = 0;
   List<String> sex = ["Maths", "Physics", "Chem", "Coding"];
 
@@ -22,7 +22,7 @@ class _leaderboard_maths extends State<leaderboard_maths> {
   final List<Widget> _pages = const [
     HomePage(),
     DiscoverPage(),
-    leaderboard_maths(),
+    // leaderboard_maths(),
     // ProfilePage()
   ];
 
@@ -343,29 +343,6 @@ class _leaderboard_maths extends State<leaderboard_maths> {
                 color: Colors.black,
                 thickness: 1,
               ),
-              Container(
-                alignment: Alignment.centerRight,
-                height: 80,
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(200, 60),
-                        elevation: 10,
-                        shape:
-                            const StadiumBorder(), //Etsi kano to button rechtangle with circular
-                        backgroundColor:
-                            const Color.fromARGB(255, 89, 61, 167)),
-                    child: const Text(
-                      'Leaderboard_physics',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, leaderboard_physicss);
-                    }),
-              )
             ])));
   }
 }
