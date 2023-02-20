@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:united/help_widgets/labeled_checkbox.dart';
+import 'package:united/components/labeled_checkbox.dart';
 
 import 'package:united/routes.dart';
 

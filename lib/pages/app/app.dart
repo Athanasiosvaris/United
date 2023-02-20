@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:united/pages/app/home_page.dart';
-import 'package:united/pages/app/leaderboard_maths.dart';
+import 'package:united/pages/app/leaderboard.dart';
 import 'package:united/pages/app/discover_page.dart';
 
 class App extends StatefulWidget {
@@ -15,7 +15,7 @@ class _App extends State<App> {
   final _pages = const [
     HomePage(),
     DiscoverPage(),
-    leaderboard_maths(),
+    Leaderboard(),
     // ProfilePage()
   ];
   int currentPageIndex = 0;
@@ -25,7 +25,6 @@ class _App extends State<App> {
       backgroundColor: const Color.fromARGB(255, 202, 196, 208),
       body: _pages[currentPageIndex],
       bottomNavigationBar: NavigationBar(
-          backgroundColor: Color.fromARGB(83, 122, 122, 122),
           destinations: const <Widget>[
             NavigationDestination(label: 'Home', icon: Icon(Icons.home)),
             NavigationDestination(label: 'Discover', icon: Icon(Icons.explore)),
