@@ -24,6 +24,14 @@ class _App extends State<App> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 202, 196, 208),
       body: _pages[currentPageIndex],
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        backgroundColor: Color.fromARGB(255, 201, 215, 202),
+        child: const Icon(Icons.chat),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: NavigationBar(
           destinations: const <Widget>[
             NavigationDestination(label: 'Home', icon: Icon(Icons.home)),
