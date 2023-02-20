@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
 class LeaderboardBox extends StatelessWidget {
-  const LeaderboardBox(
-      {super.key,
-      required this.number,
-      required this.name,
-      required this.score});
+  const LeaderboardBox({
+    super.key,
+    required this.number,
+    required this.name,
+    required this.score,
+  });
+  // required this.image
 
   final String number;
   final String name;
   final String score;
+  //final Image image;
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +31,8 @@ class LeaderboardBox extends StatelessWidget {
                 ),
                 number),
           ),
-          const Icon(
-            Icons.accessible_forward,
-            size: 50,
+          Image.asset(
+            'images/Dimi.png',
           ),
           Expanded(
             child: Padding(

@@ -27,7 +27,7 @@ class _Leaderboard extends State<Leaderboard>
             padding: const EdgeInsets.all(10),
             child: Column(children: <Widget>[
               Container(
-                  color: const Color.fromARGB(255, 89, 61, 167),
+                  color: const Color.fromARGB(255, 204, 125, 228),
                   child: Column(
                     children: <Widget>[
                       Container(
@@ -49,7 +49,7 @@ class _Leaderboard extends State<Leaderboard>
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                                color: const Color.fromARGB(255, 89, 61, 167),
+                                color: Color.fromARGB(255, 204, 125, 228),
                                 child: const Text(
                                   'Your ranking :\n 1st',
                                   textAlign: TextAlign.center,
@@ -59,14 +59,13 @@ class _Leaderboard extends State<Leaderboard>
                                       fontSize: 20),
                                 )),
                             Container(
-                              color: const Color.fromARGB(255, 89, 61, 167),
-                              child: const Icon(
-                                Icons.accessible_forward,
-                                size: 50,
+                              color: Color.fromARGB(255, 204, 125, 228),
+                              child: Image.asset(
+                                'images/Giorgos.png',
                               ),
                             ),
                             Container(
-                              color: const Color.fromARGB(255, 89, 61, 167),
+                              color: Color.fromARGB(255, 204, 125, 228),
                               child: const Text(
                                 'Your points:\n 150',
                                 textAlign: TextAlign.center,
@@ -82,7 +81,7 @@ class _Leaderboard extends State<Leaderboard>
                     ],
                   )),
               const Divider(
-                color: Colors.black,
+                color: Color.fromARGB(255, 106, 105, 105),
                 thickness: 1,
               ),
               SizedBox(
@@ -104,13 +103,26 @@ class _Leaderboard extends State<Leaderboard>
                   padding: const EdgeInsets.all(5),
                   child: Column(children: const <Widget>[
                     LeaderboardBox(
-                        number: '1',
-                        name: 'Giorgos Vlachopoulos',
-                        score: '150'),
+                      number: '1',
+                      name: 'Giorgos Vlachopoulos',
+                      score: '150',
+                    ),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
                     LeaderboardBox(
                         number: '2', name: 'Athanasios Varis', score: '130'),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
                     LeaderboardBox(
-                        number: '3', name: 'Dimitrios Vasios', score: '100')
+                        number: '3', name: 'Dimitrios Vasios', score: '100'),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
                   ]),
                 ),
                 Container(
@@ -120,32 +132,72 @@ class _Leaderboard extends State<Leaderboard>
                         number: '1',
                         name: 'Giorgos Vlachopoulos',
                         score: '150'),
-                    LeaderboardBox(
-                        number: '2', name: 'Athanasios Varis', score: '130')
-                  ]),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  child: Column(children: const <Widget>[
-                    LeaderboardBox(
-                        number: '1',
-                        name: 'Giorgos Vlachopoulos',
-                        score: '150'),
-                    LeaderboardBox(
-                        number: '2', name: 'Athanasios Varis', score: '130')
-                  ]),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  child: Column(children: const <Widget>[
-                    LeaderboardBox(
-                        number: '1',
-                        name: 'Giorgos Vlachopoulos',
-                        score: '150'),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
                     LeaderboardBox(
                         number: '2', name: 'Athanasios Varis', score: '130'),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
                     LeaderboardBox(
-                        number: '3', name: 'Dimitrios Vasios', score: '100')
+                        number: '3', name: 'Dimitrios Vasios', score: '100'),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
+                  ]),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(5),
+                  child: Column(children: const <Widget>[
+                    LeaderboardBox(
+                        number: '1',
+                        name: 'Giorgos Vlachopoulos',
+                        score: '150'),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
+                    LeaderboardBox(
+                        number: '2', name: 'Athanasios Varis', score: '130'),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
+                    LeaderboardBox(
+                        number: '3', name: 'Dimitrios Vasios', score: '100'),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
+                  ]),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(5),
+                  child: Column(children: const <Widget>[
+                    LeaderboardBox(
+                        number: '1',
+                        name: 'Giorgos Vlachopoulos',
+                        score: '150'),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
+                    LeaderboardBox(
+                        number: '2', name: 'Athanasios Varis', score: '130'),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
+                    LeaderboardBox(
+                        number: '3', name: 'Dimitrios Vasios', score: '100'),
+                    Divider(
+                      color: Color.fromARGB(255, 106, 105, 105),
+                      thickness: 1,
+                    ),
                   ]),
                 ),
               ])),
