@@ -1,4 +1,6 @@
 //https://www.youtube.com/watch?v=jKlJ9MC4nS8 => flutter search bar tutorial
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class DiscoverPage extends StatelessWidget {
@@ -7,6 +9,7 @@ class DiscoverPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: const Color.fromARGB(255, 202, 196, 208),
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title: const Text('Welcome Dimitris',
@@ -28,60 +31,6 @@ class DiscoverPage extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(5),
             child: Column(children: [
-              Column(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 100,
-                    child: Row(
-                      children: [
-                        Container(
-                            width: 100,
-                            height: 100,
-                            color: Colors.purple,
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Text(
-                                "7.2!!!\n Average",
-                                textAlign: TextAlign.center,
-                                // ignore: prefer_const_constructors
-                                style: TextStyle(
-                                    fontFamily: 'Roboto',
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 15),
-                              ),
-                            )),
-                        Expanded(child: Container()),
-                        Container(
-                            width: 150,
-                            height: 100,
-                            color: Colors.purple,
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Text(
-                                "Congrats!!!\n You belong to the 15% of the university",
-                                textAlign: TextAlign.center,
-                                // ignore: prefer_const_constructors
-                                style: TextStyle(
-                                    fontFamily: 'Roboto',
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 15),
-                              ),
-                            )
-                            // ignore: prefer_const_constructors
-
-                            )
-                      ],
-                    ),
-                  )
-                ],
-              ),
-              const Divider(
-                color: Colors.black,
-                thickness: 1,
-              ),
               Row(
                 children: [
                   Container(
@@ -93,7 +42,7 @@ class DiscoverPage extends StatelessWidget {
                     width: 70,
                     height: 20,
                     child: Text(
-                      "Activity",
+                      "Following",
                       textAlign: TextAlign.center,
                       // ignore: prefer_const_constructors
                       style: TextStyle(
@@ -110,7 +59,7 @@ class DiscoverPage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
+                      color: Color.fromARGB(255, 54, 52, 56),
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
@@ -119,19 +68,42 @@ class DiscoverPage extends StatelessWidget {
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
                         Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                          Icon(Icons.local_library_rounded,
-                              color: Colors.black),
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color.fromARGB(255, 89, 61, 167),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'A',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                           SizedBox(width: 4),
-                          Text(
-                            "Athanasios Varis ranked at top 10\n Say congrats to him",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Text(
+                              "Athanasios Varis",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                              ),
                             ),
                           ),
                         ]),
@@ -143,7 +115,7 @@ class DiscoverPage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
+                      color: Color.fromARGB(255, 54, 52, 56),
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
@@ -152,19 +124,42 @@ class DiscoverPage extends StatelessWidget {
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
                         Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                          Icon(Icons.local_library_rounded,
-                              color: Colors.black),
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color.fromARGB(255, 89, 61, 167),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'G',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                           SizedBox(width: 4),
-                          Text(
-                            "Athanasios Varis ranked at top 10\n Say congrats to him",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Text(
+                              "Giorgos Vlachopoulos",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                              ),
                             ),
                           ),
                         ]),
@@ -176,7 +171,7 @@ class DiscoverPage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
+                      color: Color.fromARGB(255, 54, 52, 56),
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
@@ -185,19 +180,42 @@ class DiscoverPage extends StatelessWidget {
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
                         Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                          Icon(Icons.local_library_rounded,
-                              color: Colors.black),
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color.fromARGB(255, 89, 61, 167),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'D',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                           SizedBox(width: 4),
-                          Text(
-                            "Athanasios Varis ranked at top 10\n Say congrats to him",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Text(
+                              "Dimitris Vasios",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                              ),
                             ),
                           ),
                         ]),
@@ -219,7 +237,7 @@ class DiscoverPage extends StatelessWidget {
                     width: 200,
                     height: 20,
                     child: Text(
-                      "Recommended profiles",
+                      "Busy areas - NTUA",
                       textAlign: TextAlign.center,
                       // ignore: prefer_const_constructors
                       style: TextStyle(
@@ -232,6 +250,52 @@ class DiscoverPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 20),
+              Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: 20),
+                    child: Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.blue,
+                      ),
+                      child: Center(
+                        child: Text(
+                          'A',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                    child: Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.green,
+                      ),
+                      child: Center(
+                        child: Text(
+                          'B',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               Row(
                 children: [
                   Container(

@@ -28,7 +28,7 @@ class _App extends State<App> {
         onPressed: () {
           // Add your onPressed code here!
         },
-        backgroundColor: Color.fromARGB(255, 201, 215, 202),
+        backgroundColor: const Color.fromARGB(255, 201, 215, 202),
         child: const Icon(Icons.chat),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
