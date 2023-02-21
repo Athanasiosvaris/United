@@ -45,3 +45,5 @@ app.*.map.json
 
 # VSCode related
 .vscode
+pubspec.yaml
+.gitignore
