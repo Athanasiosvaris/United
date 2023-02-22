@@ -48,18 +48,34 @@ class _App extends State<App> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: NavigationBar(
+          backgroundColor: Color.fromARGB(255, 95, 88, 88),
+          selectedIndex:
+              currentPageIndex, // When i tap in different selection (Home,Discover etc) it get highlighted.
           destinations: const <Widget>[
-            NavigationDestination(label: 'Home', icon: Icon(Icons.home)),
-            NavigationDestination(label: 'Discover', icon: Icon(Icons.explore)),
+            NavigationDestination(
+              label: 'Home',
+              icon: Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+            ),
+            NavigationDestination(
+                label: 'Discover',
+                icon: Icon(
+                  Icons.explore,
+                  color: Colors.white,
+                )),
             NavigationDestination(
                 label: 'Leaderboard',
                 icon: Icon(
                   Icons.leaderboard,
+                  color: Colors.white,
                 )),
             NavigationDestination(
                 label: 'Profile',
                 icon: Icon(
                   Icons.person,
+                  color: Colors.white,
                 ))
           ],
           onDestinationSelected: (int index) {
