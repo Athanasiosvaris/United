@@ -32,6 +32,44 @@ class _ProfilePage extends State<ProfilePage>
           padding: const EdgeInsets.all(5),
           child: Column(
             children: [
+              Container(
+                height: 50,
+                width: double.infinity,
+                color: Color.fromARGB(255, 202, 196, 208),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Icon(Icons.search),
+                          SizedBox(width: 5),
+                          Text('About'),
+                        ],
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Icon(Icons.smart_button_sharp),
+                          SizedBox(width: 5),
+                          Text('Statistics'),
+                        ],
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text('Button 3'),
+                    ),
+                  ],
+                ),
+              ),
               Divider(
                 color: Colors.black,
                 thickness: 1,
