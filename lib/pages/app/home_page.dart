@@ -124,31 +124,35 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
+                      color: Color.fromARGB(255, 54, 52, 56),
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
                     width: 600,
                     height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Icon(Icons.local_library_rounded,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 20.0),
+                          child: Icon(Icons.local_library_rounded,
                               color: Colors.black),
-                          SizedBox(width: 4),
-                          Text(
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 20.0),
+                          child: Text(
                             "Athanasios Varis ranked at top 10\n Say congrats to him",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                            ),
+                                fontFamily: 'Roboto',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20),
                           ),
-                        ]),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -157,31 +161,35 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
+                      color: Color.fromARGB(255, 54, 52, 56),
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
                     width: 600,
                     height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Icon(Icons.local_library_rounded,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 20.0),
+                          child: Icon(Icons.local_library_rounded,
                               color: Colors.black),
-                          SizedBox(width: 4),
-                          Text(
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 20.0),
+                          child: Text(
                             "Athanasios Varis ranked at top 10\n Say congrats to him",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                            ),
+                                fontFamily: 'Roboto',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20),
                           ),
-                        ]),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -190,31 +198,35 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
+                      color: Color.fromARGB(255, 54, 52, 56),
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
                     width: 600,
                     height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Icon(Icons.local_library_rounded,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 20.0),
+                          child: Icon(Icons.local_library_rounded,
                               color: Colors.black),
-                          SizedBox(width: 4),
-                          Text(
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 20.0),
+                          child: Text(
                             "Athanasios Varis ranked at top 10\n Say congrats to him",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                            ),
+                                fontFamily: 'Roboto',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20),
                           ),
-                        ]),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -250,7 +262,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 34, 33, 33),
+                      color: Color.fromARGB(255, 54, 52, 56),
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
@@ -259,19 +271,42 @@ class HomePage extends StatelessWidget {
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
                         Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                          Icon(Icons.local_library_rounded,
-                              color: Colors.black),
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color.fromARGB(255, 89, 61, 167),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'A',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                           SizedBox(width: 4),
-                          Text(
-                            "Athanasios Varis ",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Text(
+                              "Athanasios Varis",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                              ),
                             ),
                           ),
                         ]),
@@ -283,7 +318,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 34, 33, 33),
+                      color: Color.fromARGB(255, 54, 52, 56),
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
@@ -292,19 +327,42 @@ class HomePage extends StatelessWidget {
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
                         Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                          Icon(Icons.local_library_rounded,
-                              color: Colors.black),
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color.fromARGB(255, 89, 61, 167),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'G',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                           SizedBox(width: 4),
-                          Text(
-                            "Giorgos Vlachopoulos",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Text(
+                              "Giorgos Vlachopoulos",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                              ),
                             ),
                           ),
                         ]),
@@ -316,7 +374,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 34, 33, 33),
+                      color: Color.fromARGB(255, 54, 52, 56),
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
@@ -325,19 +383,42 @@ class HomePage extends StatelessWidget {
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
                         Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                          Icon(Icons.local_library_rounded,
-                              color: Colors.black),
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color.fromARGB(255, 89, 61, 167),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'D',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 24,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                           SizedBox(width: 4),
-                          Text(
-                            "Dimitrios Vasios",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
+                          Padding(
+                            padding: EdgeInsets.only(left: 20.0),
+                            child: Text(
+                              "Dimitris Vasios",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontFamily: 'Roboto',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                              ),
                             ),
                           ),
                         ]),
