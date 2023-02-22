@@ -91,7 +91,7 @@ class _Leaderboard extends State<Leaderboard>
                       TabBar(controller: _tabController, tabs: const <Widget>[
                     Tab(text: 'Math', icon: Icon(Icons.calculate)),
                     Tab(text: 'Physics', icon: Icon(Icons.public)),
-                    Tab(text: 'Chemistry', icon: Icon(Icons.science)),
+                    Tab(text: 'Chem', icon: Icon(Icons.science)),
                     Tab(text: 'Coding', icon: Icon(Icons.computer))
                   ]),
                 ),

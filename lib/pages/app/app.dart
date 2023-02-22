@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:united/pages/app/home_page.dart';
 import 'package:united/pages/app/leaderboard.dart';
 import 'package:united/pages/app/discover_page.dart';
+import 'package:united/pages/app/profile.dart';
 import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 
 class App extends StatefulWidget {
@@ -19,7 +20,7 @@ class _App extends State<App> {
     HomePage(),
     DiscoverPage(),
     Leaderboard(),
-    // ProfilePage()
+    ProfilePage()
   ];
   int currentPageIndex = 0;
   @override

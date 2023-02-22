@@ -6,6 +6,7 @@ import 'package:united/pages/registration/signup/signup_interests.dart';
 import 'package:united/pages/registration/signup/signup_privacy.dart';
 import 'package:united/pages/app/app.dart';
 import 'package:united/pages/app/leaderboard.dart';
+import 'package:united/pages/app/profile.dart';
 
 const String registration = '/registration';
 const String signin = '/registration/signin';
@@ -39,8 +40,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     // return MaterialPageRoute(builder: (_) => const DiscoverPage());
     case '/app/leaderboard':
       return MaterialPageRoute(builder: (_) => const Leaderboard());
-    // case '/app/profile':
-    // return MaterialPageRoute(builder: (_) => const ProfilePage());
+    case '/app/profile':
+      return MaterialPageRoute(builder: (_) => const ProfilePage());
     default:
       return MaterialPageRoute(builder: (_) => const Registration());
   }

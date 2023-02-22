@@ -7,12 +7,10 @@ class LeaderboardBox extends StatelessWidget {
     required this.name,
     required this.score,
   });
-  // required this.image
 
   final String number;
   final String name;
   final String score;
-  //final Image image;
 
   @override
   Widget build(BuildContext context) {

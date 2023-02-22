@@ -128,7 +128,7 @@ class HomePage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -148,7 +148,7 @@ class HomePage extends StatelessWidget {
                                 fontFamily: 'Roboto',
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500,
-                                fontSize: 20),
+                                fontSize: 17),
                           ),
                         )
                       ],
@@ -165,7 +165,7 @@ class HomePage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -185,7 +185,7 @@ class HomePage extends StatelessWidget {
                                 fontFamily: 'Roboto',
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500,
-                                fontSize: 20),
+                                fontSize: 17),
                           ),
                         )
                       ],
@@ -202,7 +202,7 @@ class HomePage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -216,13 +216,13 @@ class HomePage extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.only(left: 20.0),
                           child: Text(
-                            "Athanasios Varis ranked at top 10\n Say congrats to him",
+                            "Athanasios Varis received a new review!",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontFamily: 'Roboto',
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500,
-                                fontSize: 20),
+                                fontSize: 17),
                           ),
                         )
                       ],
@@ -266,7 +266,7 @@ class HomePage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
@@ -322,7 +322,7 @@ class HomePage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
@@ -378,7 +378,7 @@ class HomePage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child:
                         // ignore: prefer_const_literals_to_create_immutables

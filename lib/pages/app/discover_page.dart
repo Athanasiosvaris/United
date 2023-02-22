@@ -63,7 +63,7 @@ class DiscoverPage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
@@ -119,7 +119,7 @@ class DiscoverPage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
@@ -175,7 +175,7 @@ class DiscoverPage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
@@ -258,7 +258,7 @@ class DiscoverPage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
@@ -291,7 +291,7 @@ class DiscoverPage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
@@ -324,7 +324,7 @@ class DiscoverPage extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(10), // Set the radius to 10
                     ),
-                    width: 600,
+                    width: 380,
                     height: 50,
                     child:
                         // ignore: prefer_const_literals_to_create_immutables
