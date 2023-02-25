@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
+import 'package:united/components/activity.dart';
+import 'package:united/components/description.dart';
+import 'package:united/components/profile_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,413 +19,143 @@ class HomePage extends StatelessWidget {
                     color: Colors.white)),
             backgroundColor: const Color.fromARGB(255, 89, 61, 167)),
         body: SingleChildScrollView(
-          //SingleChildScrollView == Widget to scroll down  as much as I need to view everything
           child: Container(
-            padding: const EdgeInsets.all(5),
+            padding: const EdgeInsets.all(10),
             child: Column(children: [
-              Column(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 40,
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 100,
-                          color: Colors.grey,
-                        ),
-                        Expanded(
-                          child: Container(),
-                        ),
-                        Container(color: Colors.grey, width: 50)
-                      ],
+              const Description(title: 'Academic Performance'),
+              Container(
+                padding: const EdgeInsets.all(10),
+                height: 200,
+                child: Material(
+                  elevation: 10,
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      color: Color.fromARGB(255, 154, 130, 219),
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(20.0),
+                          bottomRight: Radius.circular(20.0),
+                          topLeft: Radius.circular(20.0),
+                          bottomLeft: Radius.circular(20.0)),
                     ),
+                    // child: Image.asset(
+                    //   'images/grades.png',
+                    //   alignment: Alignment.center,
+                    //   height: 30,
+                    //   width: 30,
+                    // ),
                   ),
-                  Container(
-                    color: Colors.purple,
-                    height: 200,
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 100,
-                    child: Row(
-                      children: [
-                        Container(
-                            width: 100,
-                            height: 100,
-                            color: Colors.purple,
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(10),
+                height: 110,
+                child: Row(
+                  children: [
+                    Material(
+                      elevation: 10,
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Container(
+                        width: 100,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 154, 130, 219),
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20.0),
+                              bottomRight: Radius.circular(20.0),
+                              topLeft: Radius.circular(20.0),
+                              bottomLeft: Radius.circular(20.0)),
+                        ),
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.only(top: 20, bottom: 20),
+                        child: Column(
+                          children: const [
+                            Expanded(
                               child: Text(
-                                "7.2!!!\n Average",
+                                "7.2",
                                 textAlign: TextAlign.center,
-                                // ignore: prefer_const_constructors
                                 style: TextStyle(
                                     fontFamily: 'Roboto',
                                     color: Colors.black,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 15),
+                                    fontSize: 20),
                               ),
-                            )),
-                        Expanded(child: Container()),
-                        Container(
-                            width: 150,
-                            height: 100,
-                            color: Colors.purple,
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
+                            ),
+                            Expanded(
                               child: Text(
-                                "Congrats!!!\n You belong to the 15% of the university",
+                                "Average",
                                 textAlign: TextAlign.center,
-                                // ignore: prefer_const_constructors
                                 style: TextStyle(
                                     fontFamily: 'Roboto',
                                     color: Colors.black,
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 15),
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 20),
                               ),
-                            )
-                            // ignore: prefer_const_constructors
-
-                            )
-                      ],
-                    ),
-                  )
-                ],
-              ),
-              const Divider(
-                color: Colors.black,
-                thickness: 1,
-              ),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 70,
-                    height: 20,
-                    child: Text(
-                      "Activity",
-                      textAlign: TextAlign.center,
-                      // ignore: prefer_const_constructors
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 54, 52, 56),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      // ignore: prefer_const_literals_to_create_immutables
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(left: 20.0),
-                          child: Icon(Icons.local_library_rounded,
-                              color: Colors.black),
+                    Expanded(child: Container()),
+                    Material(
+                      elevation: 10,
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Container(
+                        width: 200,
+                        decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 154, 130, 219),
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20.0),
+                              bottomRight: Radius.circular(20.0),
+                              topLeft: Radius.circular(20.0),
+                              bottomLeft: Radius.circular(20.0)),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 20.0),
-                          child: Text(
-                            "Athanasios Varis ranked at top 10\n Say congrats to him",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontFamily: 'Roboto',
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 17),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 54, 52, 56),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      // ignore: prefer_const_literals_to_create_immutables
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(left: 20.0),
-                          child: Icon(Icons.local_library_rounded,
-                              color: Colors.black),
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.only(top: 20, bottom: 20),
+                        child: const Text(
+                          "Congrats!! You belong to the top 5% of your university.",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontFamily: 'Roboto',
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 15),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 20.0),
-                          child: Text(
-                            "Athanasios Varis ranked at top 10\n Say congrats to him",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontFamily: 'Roboto',
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 17),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 54, 52, 56),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      // ignore: prefer_const_literals_to_create_immutables
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(left: 20.0),
-                          child: Icon(Icons.local_library_rounded,
-                              color: Colors.black),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 20.0),
-                          child: Text(
-                            "Athanasios Varis received a new review!",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontFamily: 'Roboto',
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 17),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              const Divider(
-                color: Colors.black,
-                thickness: 1,
-              ),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 200,
-                    height: 20,
-                    child: Text(
-                      "Recommended profiles",
-                      textAlign: TextAlign.center,
-                      // ignore: prefer_const_constructors
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 54, 52, 56),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromARGB(255, 89, 61, 167),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'A',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 4),
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Text(
-                              "Athanasios Varis",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ]),
-                  ),
-                ],
+              Container(
+                padding: const EdgeInsets.only(left: 10, right: 10),
+                child: const Divider(
+                  color: Colors.black,
+                  thickness: 1,
+                ),
               ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 54, 52, 56),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromARGB(255, 89, 61, 167),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'G',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 4),
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Text(
-                              "Giorgos Vlachopoulos",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ]),
-                  ),
-                ],
+              const Description(title: 'Activity'),
+              const Activity(
+                  icon: Icons.circle,
+                  title: 'Athanasios Varis ranked at top 10%',
+                  subtitle: 'Say congrats to him!'),
+              const Activity(
+                  icon: Icons.circle,
+                  title: 'Giorgos managed to get a scholarship',
+                  subtitle: 'Say congrats to him!'),
+              const Activity(
+                  icon: Icons.circle,
+                  title: 'Dimitris got 20 points this week',
+                  subtitle: 'Message him'),
+              Container(
+                padding: const EdgeInsets.only(left: 10, right: 10),
+                child: const Divider(
+                  color: Colors.black,
+                  thickness: 1,
+                ),
               ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 54, 52, 56),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromARGB(255, 89, 61, 167),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'D',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 4),
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Text(
-                              "Dimitris Vasios",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ]),
-                  ),
-                ],
-              ),
+              const Description(title: 'Recommended Profiles'),
+              const ProfileButton(initial: 'A', name: 'Athanasios Varis'),
+              const ProfileButton(initial: 'G', name: 'Giogos Vlachopoulos'),
+              const ProfileButton(name: 'Dimitris Vasios', initial: 'D')
             ]),
           ),
         ));

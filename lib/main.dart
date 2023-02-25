@@ -12,11 +12,12 @@ class United extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'United',
-      theme: ThemeData().copyWith(
-        colorScheme: ThemeData().colorScheme.copyWith(
-              primary: const Color.fromARGB(255, 202, 196, 208),
-            ),
+      theme: ThemeData(
+        navigationBarTheme: NavigationBarThemeData(
+            labelTextStyle: MaterialStateProperty.all(
+                const TextStyle(color: Colors.white))),
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+            selectedLabelStyle: TextStyle(color: Colors.white),
             unselectedIconTheme: IconThemeData(color: Colors.white60),
             unselectedLabelStyle: TextStyle(color: Colors.white60),
             backgroundColor: Color.fromARGB(255, 73, 69, 79),

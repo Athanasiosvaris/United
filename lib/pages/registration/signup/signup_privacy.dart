@@ -49,113 +49,83 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                   )),
               const SizedBox(height: 40),
               Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(20.0),
-                        topRight: Radius.circular(20.0)),
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.grade,
-                      label: 'Grades from your university',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: grades,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          grades = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.newspaper,
-                      label: 'News & Updates from regarding your courses',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: news,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          news = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.message,
-                      label: 'Messages from friends',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: messages,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          messages = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.play_lesson,
-                      label: 'Courses updates',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: courses,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          courses = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.circle,
-                      label: 'Track me while on app',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: trackOn,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          trackOff = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    borderRadius: const BorderRadius.only(
-                        bottomLeft: Radius.circular(20.0),
-                        bottomRight: Radius.circular(20.0)),
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.circle_outlined,
-                      label: 'Track me while off app',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: trackOff,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          trackOff = true;
-                        });
-                      },
-                    ),
-                  )),
+                padding: const EdgeInsets.all(20.0),
+                child: Material(
+                  elevation: 10,
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: Column(
+                    children: [
+                      LabeledCheckbox(
+                        icon: Icons.grade,
+                        label: 'Grades from your university',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: grades,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            grades = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.newspaper,
+                        label: 'News & Updates from regarding your courses',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: news,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            news = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.message,
+                        label: 'Messages from friends',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: messages,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            messages = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.play_lesson,
+                        label: 'Courses updates',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: courses,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            courses = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.circle,
+                        label: 'Track me while on app',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: trackOn,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            trackOff = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.circle_outlined,
+                        label: 'Track me while off app',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: trackOff,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            trackOff = true;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               Container(
                   padding: const EdgeInsets.fromLTRB(20, 40, 20, 40),
                   child: Row(

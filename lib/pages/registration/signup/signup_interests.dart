@@ -51,164 +51,116 @@ class _SignUpPageInterests extends State<SignUpPageInterests> {
                   )),
               const SizedBox(height: 40),
               Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(20.0),
-                        topRight: Radius.circular(20.0)),
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.calculate,
-                      label: 'Math',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: math,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          math = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.public,
-                      label: 'Physics',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: physics,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          physics = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.science,
-                      label: 'Chemistry',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: chemistry,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          chemistry = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.computer,
-                      label: 'Computer Science',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: computerScience,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          computerScience = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.biotech,
-                      label: 'Biology',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: biology,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          biology = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.euro,
-                      label: 'Economics',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: economics,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          economics = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.gavel,
-                      label: 'Law',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: law,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          law = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.theaters,
-                      label: 'Art & Humanities',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: artHumanities,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          artHumanities = true;
-                        });
-                      },
-                    ),
-                  )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  alignment: Alignment.center,
-                  child: Material(
-                    borderRadius: const BorderRadius.only(
-                        bottomLeft: Radius.circular(20.0),
-                        bottomRight: Radius.circular(20.0)),
-                    color: Colors.white,
-                    child: LabeledCheckbox(
-                      icon: Icons.medical_services,
-                      label: 'Medicine',
-                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      value: medicine,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          medicine = true;
-                        });
-                      },
-                    ),
-                  )),
+                padding: const EdgeInsets.all(20),
+                child: Material(
+                  color: Colors.white,
+                  borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+                  elevation: 10,
+                  child: Column(
+                    children: [
+                      LabeledCheckbox(
+                        icon: Icons.calculate,
+                        label: 'Math',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: math,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            math = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.public,
+                        label: 'Physics',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: physics,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            physics = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.science,
+                        label: 'Chemistry',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: chemistry,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            chemistry = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.computer,
+                        label: 'Computer Science',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: computerScience,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            computerScience = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.biotech,
+                        label: 'Biology',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: biology,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            biology = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.euro,
+                        label: 'Economics',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: economics,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            economics = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.gavel,
+                        label: 'Law',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: law,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            law = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.theaters,
+                        label: 'Art & Humanities',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: artHumanities,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            artHumanities = true;
+                          });
+                        },
+                      ),
+                      LabeledCheckbox(
+                        icon: Icons.medical_services,
+                        label: 'Medicine',
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        value: medicine,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            medicine = true;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               Container(
                   padding: const EdgeInsets.fromLTRB(20, 40, 20, 40),
                   child: Row(
