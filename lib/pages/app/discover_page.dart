@@ -1,7 +1,7 @@
-//https://www.youtube.com/watch?v=jKlJ9MC4nS8 => flutter search bar tutorial
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
+import 'package:united/components/description.dart';
+import 'package:united/components/profile_button.dart';
+import 'package:united/components/busy_areas.dart';
 
 class DiscoverPage extends StatelessWidget {
   const DiscoverPage({Key? key}) : super(key: key);
@@ -9,348 +9,63 @@ class DiscoverPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 202, 196, 208),
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          title: const Text('Welcome Dimitris',
-              style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white)),
-          backgroundColor: const Color.fromARGB(255, 89, 61, 167),
-          actions: [
-            IconButton(
-                onPressed: () {
-                  showSearch(context: context, delegate: CustomSearch());
-                },
-                icon: const Icon(Icons.search))
-          ],
-        ),
-        body: SingleChildScrollView(
-          //SingleChildScrollView == Widget to scroll down  as much as I need to view everything
-          child: Container(
-            padding: const EdgeInsets.all(5),
-            child: Column(children: [
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 70,
-                    height: 20,
-                    child: Text(
-                      "Following",
-                      textAlign: TextAlign.center,
-                      // ignore: prefer_const_constructors
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 54, 52, 56),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromARGB(255, 89, 61, 167),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'A',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 4),
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Text(
-                              "Athanasios Varis",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ]),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 54, 52, 56),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromARGB(255, 89, 61, 167),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'G',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 4),
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Text(
-                              "Giorgos Vlachopoulos",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ]),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 54, 52, 56),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color.fromARGB(255, 89, 61, 167),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'D',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 4),
-                          Padding(
-                            padding: EdgeInsets.only(left: 20.0),
-                            child: Text(
-                              "Dimitris Vasios",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontFamily: 'Roboto',
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ),
-                        ]),
-                  ),
-                ],
-              ),
-              const Divider(
+      backgroundColor: const Color.fromARGB(255, 202, 196, 208),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: const Text('Welcome Dimitris',
+            style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white)),
+        backgroundColor: const Color.fromARGB(255, 89, 61, 167),
+        actions: [
+          IconButton(
+              onPressed: () {
+                showSearch(context: context, delegate: CustomSearch());
+              },
+              icon: const Icon(Icons.search))
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(10),
+          child: Column(children: [
+            const Description(title: 'Following'),
+            const ProfileButton(initial: 'A', name: 'Athanasios Varis'),
+            const ProfileButton(initial: 'G', name: 'Giogos Vlachopoulos'),
+            const ProfileButton(name: 'Dimitris Vasios', initial: 'D'),
+            Container(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: const Divider(
                 color: Colors.black,
                 thickness: 1,
               ),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 200,
-                    height: 20,
-                    child: Text(
-                      "Busy areas - NTUA",
-                      textAlign: TextAlign.center,
-                      // ignore: prefer_const_constructors
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 34, 33, 33),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Icon(Icons.local_library_rounded,
-                              color: Colors.black),
-                          SizedBox(width: 4),
-                          Text(
-                            "Athanasios Varis ",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ]),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 34, 33, 33),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Icon(Icons.local_library_rounded,
-                              color: Colors.black),
-                          SizedBox(width: 4),
-                          Text(
-                            "Giorgos Vlachopoulos",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ]),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 34, 33, 33),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 380,
-                    height: 50,
-                    child:
-                        // ignore: prefer_const_literals_to_create_immutables
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                          Icon(Icons.local_library_rounded,
-                              color: Colors.black),
-                          SizedBox(width: 4),
-                          Text(
-                            "Dimitrios Vasios",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ]),
-                  ),
-                ],
-              ),
-            ]),
-          ),
-        ));
+            ),
+            const Description(title: 'Busy Areas'),
+            BusyAreas(
+                icon: Icons.book,
+                place: 'Library',
+                busy: 'Sightly Busy',
+                color: Colors.orange.shade400),
+            const BusyAreas(
+                icon: Icons.coffee,
+                place: 'Restaurant',
+                busy: 'Very busy',
+                color: Colors.red),
+            const BusyAreas(
+                icon: Icons.computer,
+                place: 'ECE',
+                busy: 'Not Busy',
+                color: Colors.white),
+            const BusyAreas(
+                icon: Icons.sports_gymnastics,
+                place: 'Gym Center',
+                busy: 'Not Busy',
+                color: Colors.white),
+          ]),
+        ),
+      ),
+    );
   }
 }
 

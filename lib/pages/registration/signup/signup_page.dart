@@ -13,7 +13,7 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPage extends State<SignUpPage> {
   int? sexChoice = 0;
   List<String> sex = ["Male", "Female"];
-  var university;
+  dynamic university;
   List<String> universities = <String>[
     'National Technical University of Athens',
     'Athens University of Economics',
