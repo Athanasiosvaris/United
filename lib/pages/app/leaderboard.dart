@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:united/components/leaderboard_box.dart';
 
-class Leaderboard extends StatefulWidget {
-  const Leaderboard({Key? key}) : super(key: key);
+class LeaderboardPage extends StatefulWidget {
+  const LeaderboardPage({Key? key}) : super(key: key);
 
   @override
-  State<Leaderboard> createState() => _Leaderboard();
+  State<LeaderboardPage> createState() => _LeaderboardPage();
 }
 
-class _Leaderboard extends State<Leaderboard>
+class _LeaderboardPage extends State<LeaderboardPage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
@@ -23,7 +23,7 @@ class _Leaderboard extends State<Leaderboard>
     return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          title: const Text('Welcome Dimitris',
+          title: const Text('Leaderboard',
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -88,7 +88,7 @@ class _Leaderboard extends State<Leaderboard>
                 thickness: 1,
               ),
               SizedBox(
-                height: 80,
+                height: 75,
                 child: AppBar(
                   backgroundColor: const Color.fromARGB(255, 202, 196, 208),
                   bottom: TabBar(

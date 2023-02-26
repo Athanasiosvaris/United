@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:united/components/leaderboard_box.dart';
+import 'package:united/components/profile_description.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
-  _ProfilePage createState() => _ProfilePage();
+  State<ProfilePage> createState() => _ProfilePage();
 }
 
 class _ProfilePage extends State<ProfilePage>
@@ -21,334 +22,481 @@ class _ProfilePage extends State<ProfilePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 202, 196, 208),
-      appBar: AppBar(),
-      body: SingleChildScrollView(
-        //SingleChildScrollView == Widget to scroll down  as much as I need to view everything
-        child: Container(
-          padding: const EdgeInsets.all(5),
-          child: Column(
-            children: [
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          title: const Text('Profile',
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white)),
+          backgroundColor: const Color.fromARGB(255, 89, 61, 167),
+        ),
+        backgroundColor: const Color.fromARGB(255, 202, 196, 208),
+        body: Padding(
+            padding: const EdgeInsets.all(10),
+            child: Column(children: <Widget>[
               Container(
-                height: 50,
-                width: double.infinity,
-                color: Color.fromARGB(255, 202, 196, 208),
+                padding: const EdgeInsets.all(10),
+                height: 230,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        // ignore: prefer_const_literals_to_create_immutables
-                        children: [
-                          Icon(Icons.search),
-                          SizedBox(width: 5),
-                          Text('About'),
-                        ],
-                      ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Material(
+                          elevation: 10,
+                          borderRadius: BorderRadius.circular(10),
+                          child: Container(
+                            height: 150,
+                            width: 150,
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(10.0),
+                                  bottomRight: Radius.circular(10.0),
+                                  topLeft: Radius.circular(10.0),
+                                  bottomLeft: Radius.circular(10.0)),
+                            ),
+                            alignment: Alignment.center,
+                            child: Image.asset(
+                                '../../../assets/images/person.png'),
+                          ),
+                        ),
+                        Material(
+                          elevation: 10,
+                          borderRadius: BorderRadius.circular(10),
+                          child: Container(
+                            height: 40,
+                            width: 100,
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(10.0),
+                                  bottomRight: Radius.circular(10.0),
+                                  topLeft: Radius.circular(10.0),
+                                  bottomLeft: Radius.circular(10.0)),
+                              color: Color.fromARGB(255, 217, 217, 217),
+                            ),
+                            alignment: Alignment.center,
+                            child: const Text(
+                              'vas99',
+                              style: TextStyle(
+                                  fontFamily: 'Roboto',
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 15),
+                            ),
+                          ),
+                        )
+                      ],
                     ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        // ignore: prefer_const_literals_to_create_immutables
-                        children: [
-                          Icon(Icons.smart_button_sharp),
-                          SizedBox(width: 5),
-                          Text('Statistics'),
-                        ],
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: Text('Button 3'),
-                    ),
+                    SizedBox(
+                        width: 260,
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const ProfileDescription(
+                                    width: 200,
+                                    height: 30,
+                                    description: 'Contributor level 10',
+                                    color: Color.fromARGB(255, 217, 217, 217)),
+                                Material(
+                                  elevation: 10,
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Container(
+                                      height: 30,
+                                      width: 40,
+                                      decoration: const BoxDecoration(
+                                        borderRadius: BorderRadius.only(
+                                            topRight: Radius.circular(10.0),
+                                            bottomRight: Radius.circular(10.0),
+                                            topLeft: Radius.circular(10.0),
+                                            bottomLeft: Radius.circular(10.0)),
+                                        color:
+                                            Color.fromARGB(255, 217, 217, 217),
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: const Icon(Icons.badge)),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  ProfileDescription(
+                                      width: 130,
+                                      height: 30,
+                                      description: 'Score 4.37/5',
+                                      color:
+                                          Color.fromARGB(255, 217, 217, 217)),
+                                  ProfileDescription(
+                                      width: 100,
+                                      height: 30,
+                                      description: 'Top 5%',
+                                      color: Color.fromARGB(255, 217, 217, 217))
+                                ]),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: const [
+                                ProfileDescription(
+                                    width: 200,
+                                    height: 30,
+                                    description: 'Computer Science',
+                                    color: Color.fromARGB(255, 217, 217, 217))
+                              ],
+                            ),
+                            const SizedBox(height: 20),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width: 100,
+                                  alignment: Alignment.center,
+                                  child: const Text(
+                                    'Followers\n1145',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontFamily: 'Roboto',
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 15),
+                                  ),
+                                ),
+                                Container(
+                                  height: 50,
+                                  width: 100,
+                                  alignment: Alignment.center,
+                                  child: const Text(
+                                    'Reviews\n24',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontFamily: 'Roboto',
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 15),
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ))
                   ],
                 ),
               ),
-              Divider(
-                color: Colors.black,
+              const Divider(
+                color: Color.fromARGB(255, 106, 105, 105),
                 thickness: 1,
               ),
-              Column(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 100,
-                    child: Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            width: 100,
-                            height: 100,
-                            color: Color.fromARGB(180, 102, 204, 241),
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                // ignore: prefer_const_literals_to_create_immutables
-                                children: [
-                                  Icon(
-                                    Icons.add_reaction_outlined,
-                                    color: Colors.black,
-                                  ),
-                                  SizedBox(width: 5),
-                                  Text(
-                                    "Follow",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontFamily: 'Roboto',
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 100,
-                            height: 100,
-                            color: Color.fromARGB(180, 102, 204, 241),
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                // ignore: prefer_const_literals_to_create_immutables
-                                children: [
-                                  Icon(
-                                    Icons.reviews,
-                                    color: Colors.black,
-                                  ),
-                                  SizedBox(width: 5),
-                                  Text(
-                                    "Review",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontFamily: 'Roboto',
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          // Expanded(child: Container()),
-                          Container(
-                            width: 100,
-                            height: 100,
-                            color: Color.fromARGB(180, 102, 204, 241),
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                // ignore: prefer_const_literals_to_create_immutables
-                                children: [
-                                  Icon(
-                                    Icons.message_rounded,
-                                    color: Colors.black,
-                                  ),
-                                  SizedBox(width: 5),
-                                  Text(
-                                    "Message",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontFamily: 'Roboto',
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
+              SizedBox(
+                height: 80,
+                child: AppBar(
+                  backgroundColor: const Color.fromARGB(255, 202, 196, 208),
+                  bottom: TabBar(
+                      indicatorColor: Colors.black,
+                      labelColor: Colors.black,
+                      controller: _tabController,
+                      tabs: const <Widget>[
+                        Tab(text: 'About', icon: Icon(Icons.calculate)),
+                        Tab(text: 'Statistics', icon: Icon(Icons.numbers)),
+                        Tab(text: 'Reviews', icon: Icon(Icons.reviews)),
+                      ]),
+                ),
+              ),
+              Expanded(
+                  child:
+                      TabBarView(controller: _tabController, children: <Widget>[
+                SingleChildScrollView(
+                  child: Container(
+                    padding: const EdgeInsets.all(5),
+                    child: Column(children: const <Widget>[
+                      SizedBox(
+                        height: 20,
                       ),
-                    ),
-                  )
-                ],
-              ),
-              Divider(
-                color: Colors.black,
-                thickness: 1,
-              ),
-              SizedBox(height: 50),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 70,
-                    height: 20,
-                    child: Text(
-                      "Activity",
-                      textAlign: TextAlign.center,
-                      // ignore: prefer_const_constructors
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
+                      LeaderboardBox(
+                        imagePath: '../../../assets/images/Dimi.png',
+                        number: '1',
+                        name: 'Giorgos Vlachopoulos',
+                        score: '150',
                       ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    width: 380,
-                    decoration: BoxDecoration(
-                      color: Colors.grey,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            Padding(
-                                padding: EdgeInsets.all(5.0),
-                                child: Icon(Icons.home_work_outlined)),
-                            Text('Athens'),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.all(5.0),
-                              child: Icon(Icons.school_outlined),
-                            ),
-                            Text(
-                                'School of Electrical & Computer engineering, NTUA '),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.all(5.0),
-                              child: Icon(Icons.mail_outline),
-                            ),
-                            Text('dimitrisv@hotmail.com'),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.all(5.0),
-                              child: Icon(Icons.facebook_outlined),
-                            ),
-                            Text('https://'),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 15),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 101, 98, 108),
-                      borderRadius:
-                          BorderRadius.circular(10), // Set the radius to 10
-                    ),
-                    width: 70,
-                    height: 20,
-                    child: Text(
-                      "Interests",
-                      textAlign: TextAlign.center,
-                      // ignore: prefer_const_constructors
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
                       ),
-                    ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/thanasis.png',
+                          number: '2',
+                          name: 'Athanasios Varis',
+                          score: '130'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/Giorgos.png',
+                          number: '3',
+                          name: 'Dimitrios Vasios',
+                          score: '100'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                        imagePath: '../../../assets/images/Dimi.png',
+                        number: '4',
+                        name: 'Giorgos Vlachopoulos',
+                        score: '150',
+                      ),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/thanasis.png',
+                          number: '5',
+                          name: 'Athanasios Varis',
+                          score: '130'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/Giorgos.png',
+                          number: '6',
+                          name: 'Dimitrios Vasios',
+                          score: '100'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                        imagePath: '../../../assets/images/Dimi.png',
+                        number: '7',
+                        name: 'Giorgos Vlachopoulos',
+                        score: '150',
+                      ),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/thanasis.png',
+                          number: '8',
+                          name: 'Athanasios Varis',
+                          score: '130'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/Giorgos.png',
+                          number: '9',
+                          name: 'Dimitrios Vasios',
+                          score: '100'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                    ]),
                   ),
-                ],
-              ),
-              SizedBox(height: 15),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    width: 380,
-                    decoration: BoxDecoration(
-                      color: Colors.grey,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            Padding(
-                                padding: EdgeInsets.all(5.0),
-                                child: Icon(Icons.home_work_outlined)),
-                            Text('Athens'),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.all(5.0),
-                              child: Icon(Icons.school_outlined),
-                            ),
-                            Text(
-                                'School of Electrical & Computer engineering, NTUA '),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.all(5.0),
-                              child: Icon(Icons.mail_outline),
-                            ),
-                            Text('dimitrisv@hotmail.com'),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.all(5.0),
-                              child: Icon(Icons.facebook_outlined),
-                            ),
-                            Text('https://'),
-                          ],
-                        ),
-                      ],
-                    ),
+                ),
+                SingleChildScrollView(
+                  child: Container(
+                    padding: const EdgeInsets.all(5),
+                    child: Column(children: const <Widget>[
+                      SizedBox(
+                        height: 20,
+                      ),
+                      LeaderboardBox(
+                        imagePath: '../../../assets/images/Dimi.png',
+                        number: '1',
+                        name: 'Giorgos Vlachopoulos',
+                        score: '150',
+                      ),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/thanasis.png',
+                          number: '2',
+                          name: 'Athanasios Varis',
+                          score: '130'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/Giorgos.png',
+                          number: '3',
+                          name: 'Dimitrios Vasios',
+                          score: '100'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                        imagePath: '../../../assets/images/Dimi.png',
+                        number: '4',
+                        name: 'Giorgos Vlachopoulos',
+                        score: '150',
+                      ),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/thanasis.png',
+                          number: '5',
+                          name: 'Athanasios Varis',
+                          score: '130'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/Giorgos.png',
+                          number: '6',
+                          name: 'Dimitrios Vasios',
+                          score: '100'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                        imagePath: '../../../assets/images/Dimi.png',
+                        number: '7',
+                        name: 'Giorgos Vlachopoulos',
+                        score: '150',
+                      ),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/thanasis.png',
+                          number: '8',
+                          name: 'Athanasios Varis',
+                          score: '130'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/Giorgos.png',
+                          number: '9',
+                          name: 'Dimitrios Vasios',
+                          score: '100'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                    ]),
                   ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+                ),
+                SingleChildScrollView(
+                  child: Container(
+                    padding: const EdgeInsets.all(5),
+                    child: Column(children: const <Widget>[
+                      SizedBox(
+                        height: 20,
+                      ),
+                      LeaderboardBox(
+                        imagePath: '../../../assets/images/Dimi.png',
+                        number: '1',
+                        name: 'Giorgos Vlachopoulos',
+                        score: '150',
+                      ),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/thanasis.png',
+                          number: '2',
+                          name: 'Athanasios Varis',
+                          score: '130'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/Giorgos.png',
+                          number: '3',
+                          name: 'Dimitrios Vasios',
+                          score: '100'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                        imagePath: '../../../assets/images/Dimi.png',
+                        number: '4',
+                        name: 'Giorgos Vlachopoulos',
+                        score: '150',
+                      ),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/thanasis.png',
+                          number: '5',
+                          name: 'Athanasios Varis',
+                          score: '130'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/Giorgos.png',
+                          number: '6',
+                          name: 'Dimitrios Vasios',
+                          score: '100'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                        imagePath: '../../../assets/images/Dimi.png',
+                        number: '7',
+                        name: 'Giorgos Vlachopoulos',
+                        score: '150',
+                      ),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/thanasis.png',
+                          number: '8',
+                          name: 'Athanasios Varis',
+                          score: '130'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                      LeaderboardBox(
+                          imagePath: '../../../assets/images/Giorgos.png',
+                          number: '9',
+                          name: 'Dimitrios Vasios',
+                          score: '100'),
+                      Divider(
+                        color: Color.fromARGB(255, 106, 105, 105),
+                        thickness: 1,
+                      ),
+                    ]),
+                  ),
+                ),
+              ])),
+            ])));
   }
 }

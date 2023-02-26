@@ -16,7 +16,7 @@ class _App extends State<App> {
   final _pages = const [
     HomePage(),
     DiscoverPage(),
-    Leaderboard(),
+    LeaderboardPage(),
     ProfilePage()
   ];
   int currentPageIndex = 0;

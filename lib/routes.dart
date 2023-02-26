@@ -41,7 +41,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case '/app/discover':
       return MaterialPageRoute(builder: (_) => const DiscoverPage());
     case '/app/leaderboard':
-      return MaterialPageRoute(builder: (_) => const Leaderboard());
+      return MaterialPageRoute(builder: (_) => const LeaderboardPage());
     case '/app/profile':
       return MaterialPageRoute(builder: (_) => const ProfilePage());
     default:

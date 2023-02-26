@@ -12,7 +12,7 @@ class DiscoverPage extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 202, 196, 208),
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text('Welcome Dimitris',
+        title: const Text('Discover',
             style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
