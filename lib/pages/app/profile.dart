@@ -569,12 +569,15 @@ class _ProfilePage extends State<ProfilePage>
                 ),
               ),
               SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
                     Container(
-                      padding: const EdgeInsets.all(15),
+                        padding: const EdgeInsets.only(left: 10),
+                        child: const Description(title: 'Athanasios Varis')),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                       child: Material(
                         elevation: 10,
                         borderRadius: BorderRadius.circular(20.0),
@@ -590,27 +593,21 @@ class _ProfilePage extends State<ProfilePage>
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
-                                ProfilePanel(title: 'City', subtitle: 'Athens'),
                                 ProfilePanel(
-                                    title: 'University',
+                                    title: 'Great Teacher',
+                                    length: 400,
                                     subtitle:
-                                        'School of Electrical Engineering, NTUA'),
-                                ProfilePanel(
-                                    title: 'Email',
-                                    subtitle: 'dimitrvas99@gmail.com'),
-                                ProfilePanel(
-                                    title: 'LinkedIn',
-                                    subtitle:
-                                        'https://www.linkedin.com/in/dv99/')
+                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
                               ],
                             )),
                       ),
                     ),
                     Container(
                         padding: const EdgeInsets.only(left: 10),
-                        child: const Description(title: 'Interests')),
+                        child:
+                            const Description(title: 'Giorgos Vlachopoulos')),
                     Container(
-                      padding: const EdgeInsets.all(20),
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                       child: Material(
                         elevation: 10,
                         borderRadius: BorderRadius.circular(20.0),
@@ -627,25 +624,19 @@ class _ProfilePage extends State<ProfilePage>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 ProfilePanel(
-                                    title: 'Fields',
+                                    title: 'Great Teacher',
+                                    length: 400,
                                     subtitle:
-                                        'Computer Science\nElectrical Engineering'),
-                                ProfilePanel(
-                                    title: 'Favoutite Courses',
-                                    subtitle:
-                                        'Algorithms\nHuman Computer Interaction\nVLSI\nNeural Networks'),
-                                ProfilePanel(
-                                    title: 'Hobbies',
-                                    subtitle: 'Guitas\nBasketball\nMovies'),
+                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
                               ],
                             )),
                       ),
                     ),
                     Container(
                         padding: const EdgeInsets.only(left: 10),
-                        child: const Description(title: 'Projects')),
+                        child: const Description(title: 'Dimitris Vasios')),
                     Container(
-                      padding: const EdgeInsets.all(20),
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                       child: Material(
                         elevation: 10,
                         borderRadius: BorderRadius.circular(20.0),
@@ -662,23 +653,45 @@ class _ProfilePage extends State<ProfilePage>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 ProfilePanel(
-                                    title: 'Prom Racing',
+                                    title: 'Great Teacher',
+                                    length: 400,
                                     subtitle:
-                                        'Participated in Prom Racing from 2020 to 2022 as an\n electrical engineer'),
-                                ProfilePanel(
-                                    title: 'Human Computer Interaction Project',
-                                    subtitle: 'Created a prototype app'),
-                                ProfilePanel(
-                                    title: 'Algorithms',
-                                    subtitle:
-                                        'Solved interesting algorithmic challenges'),
+                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
                               ],
                             )),
                       ),
                     ),
-                  ],
-                ),
-              ),
+                    Container(
+                        padding: const EdgeInsets.only(left: 10),
+                        child:
+                            const Description(title: 'Giannis Papapopoulos')),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Material(
+                        elevation: 10,
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Container(
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(20.0),
+                                  bottomRight: Radius.circular(20.0),
+                                  topLeft: Radius.circular(20.0),
+                                  bottomLeft: Radius.circular(20.0)),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                ProfilePanel(
+                                    title: 'Great Teacher',
+                                    length: 400,
+                                    subtitle:
+                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
+                              ],
+                            )),
+                      ),
+                    ),
+                  ])),
             ]),
           )),
         ]));

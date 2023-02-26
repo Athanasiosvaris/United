@@ -5,9 +5,11 @@ class ProfilePanel extends StatelessWidget {
     super.key,
     required this.title,
     required this.subtitle,
+    this.length,
   });
   final String title;
   final String subtitle;
+  final double? length;
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +31,15 @@ class ProfilePanel extends StatelessWidget {
                 const SizedBox(
                   height: 5,
                 ),
-                Text(subtitle,
-                    style: const TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Roboto',
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold))
+                SizedBox(
+                  width: length,
+                  child: Text(subtitle,
+                      style: const TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Roboto',
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold)),
+                )
               ],
             ),
             const Spacer()
