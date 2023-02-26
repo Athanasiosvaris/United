@@ -25,25 +25,22 @@ class HomePage extends StatelessWidget {
               const Description(title: 'Academic Performance'),
               Container(
                 padding: const EdgeInsets.all(10),
-                height: 200,
                 child: Material(
                   elevation: 10,
                   borderRadius: BorderRadius.circular(20.0),
                   child: Container(
+                    height: 200,
                     decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 154, 130, 219),
-                      borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(20.0),
-                          bottomRight: Radius.circular(20.0),
-                          topLeft: Radius.circular(20.0),
-                          bottomLeft: Radius.circular(20.0)),
-                    ),
-                    // child: Image.asset(
-                    //   'images/grades.png',
-                    //   alignment: Alignment.center,
-                    //   height: 30,
-                    //   width: 30,
-                    // ),
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(20.0),
+                            bottomRight: Radius.circular(20.0),
+                            topLeft: Radius.circular(20.0),
+                            bottomLeft: Radius.circular(20.0)),
+                        image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: AssetImage(
+                                '../../../assets/images/grades.png')),
+                        shape: BoxShape.rectangle),
                   ),
                 ),
               ),
