@@ -8,8 +8,7 @@ class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
-  _SignInPage createState() => _SignInPage();
+  State<SignInPage> createState() => _SignInPage();
 }
 
 class _SignInPage extends State<SignInPage> {

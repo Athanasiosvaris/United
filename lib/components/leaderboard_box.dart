@@ -6,20 +6,22 @@ class LeaderboardBox extends StatelessWidget {
     required this.number,
     required this.name,
     required this.score,
+    required this.imagePath,
   });
 
   final String number;
   final String name;
   final String score;
+  final String imagePath;
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return SizedBox(
+      height: 50,
       child: Row(
-        // ignore: prefer_const_literals_to_create_immutables
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.fromLTRB(10, 10, 20, 10),
             child: Text(
                 textAlign: TextAlign.left,
                 style: const TextStyle(
@@ -29,9 +31,7 @@ class LeaderboardBox extends StatelessWidget {
                 ),
                 number),
           ),
-          Image.asset(
-            'images/Dimi.png',
-          ),
+          Image.asset(imagePath),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(8.0),

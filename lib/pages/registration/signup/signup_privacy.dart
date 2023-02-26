@@ -7,8 +7,7 @@ class SignUpPagePrivacy extends StatefulWidget {
   const SignUpPagePrivacy({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
-  _SignUpPagePrivacy createState() => _SignUpPagePrivacy();
+  State<SignUpPagePrivacy> createState() => _SignUpPagePrivacy();
 }
 
 class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
