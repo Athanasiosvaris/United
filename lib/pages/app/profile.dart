@@ -60,8 +60,8 @@ class _ProfilePage extends State<ProfilePage>
                                   bottomLeft: Radius.circular(10.0)),
                               image: DecorationImage(
                                   fit: BoxFit.fill,
-                                  image: AssetImage(
-                                      '../../../assets/images/person.png'))),
+                                  image:
+                                      AssetImage('assets/images/person.png'))),
                         ),
                       ),
                       const SizedBox(
@@ -510,7 +510,7 @@ class _ProfilePage extends State<ProfilePage>
                             image: DecorationImage(
                                 fit: BoxFit.fill,
                                 image: AssetImage(
-                                    '../../../assets/images/grades_white.png')),
+                                    'assets/images/grades_white.png')),
                           ),
                         ),
                       ),
@@ -534,7 +534,7 @@ class _ProfilePage extends State<ProfilePage>
                               image: DecorationImage(
                                   fit: BoxFit.fill,
                                   image: AssetImage(
-                                      '../../../assets/images/reviews_white.png')),
+                                      'assets/images/reviews_white.png')),
                               shape: BoxShape.rectangle),
                         ),
                       ),

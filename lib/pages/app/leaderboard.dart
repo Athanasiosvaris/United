@@ -114,7 +114,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         height: 20,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '1',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -124,7 +124,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '2',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -133,7 +133,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '3',
                           name: 'Dimitrios Vasios',
                           score: '100'),
@@ -142,7 +142,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '4',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -152,7 +152,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '5',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -161,7 +161,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '6',
                           name: 'Dimitrios Vasios',
                           score: '100'),
@@ -170,7 +170,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '7',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -180,7 +180,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '8',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -189,7 +189,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '9',
                           name: 'Dimitrios Vasios',
                           score: '100'),
@@ -208,7 +208,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         height: 20,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '1',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -218,7 +218,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '2',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -227,7 +227,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '3',
                           name: 'Dimitrios Vasios',
                           score: '100'),
@@ -236,7 +236,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '4',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -246,7 +246,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '5',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -255,7 +255,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '6',
                           name: 'Dimitrios Vasios',
                           score: '100'),
@@ -264,7 +264,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '7',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -274,7 +274,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '8',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -283,7 +283,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '9',
                           name: 'Dimitrios Vasios',
                           score: '100'),
@@ -302,7 +302,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         height: 20,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '1',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -312,7 +312,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '2',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -321,7 +321,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '3',
                           name: 'Dimitrios Vasios',
                           score: '100'),
@@ -330,7 +330,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '4',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -340,7 +340,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '5',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -349,7 +349,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '6',
                           name: 'Dimitrios Vasios',
                           score: '100'),
@@ -358,7 +358,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '7',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -368,7 +368,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '8',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -377,7 +377,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '9',
                           name: 'Dimitrios Vasios',
                           score: '100'),
@@ -396,7 +396,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         height: 20,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '1',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -406,7 +406,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '2',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -415,7 +415,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '3',
                           name: 'Dimitrios Vasios',
                           score: '100'),
@@ -424,7 +424,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '4',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -434,7 +434,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '5',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -443,7 +443,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '6',
                           name: 'Dimitrios Vasios',
                           score: '100'),
@@ -452,7 +452,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                        imagePath: '../../../assets/images/Dimi.png',
+                        imagePath: 'assets/images/Dimi.png',
                         number: '7',
                         name: 'Giorgos Vlachopoulos',
                         score: '150',
@@ -462,7 +462,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/thanasis.png',
+                          imagePath: 'assets/images/thanasis.png',
                           number: '8',
                           name: 'Athanasios Varis',
                           score: '130'),
@@ -471,7 +471,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                         thickness: 1,
                       ),
                       LeaderboardBox(
-                          imagePath: '../../../assets/images/Giorgos.png',
+                          imagePath: 'assets/images/Giorgos.png',
                           number: '9',
                           name: 'Dimitrios Vasios',
                           score: '100'),

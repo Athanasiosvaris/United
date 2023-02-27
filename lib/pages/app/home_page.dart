@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
                         image: DecorationImage(
                             fit: BoxFit.fill,
                             image: AssetImage(
-                                '../../../assets/images/grades.png')),
+                                'assets/images/grades.png')),
                         shape: BoxShape.rectangle),
                   ),
                 ),
