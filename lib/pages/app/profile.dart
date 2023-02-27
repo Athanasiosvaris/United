@@ -41,7 +41,7 @@ class _ProfilePage extends State<ProfilePage>
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: 150,
+                  width: 100,
                   padding: const EdgeInsets.all(5),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -50,8 +50,8 @@ class _ProfilePage extends State<ProfilePage>
                         elevation: 10,
                         borderRadius: BorderRadius.circular(10),
                         child: Container(
-                          width: 100,
-                          height: 100,
+                          width: 80,
+                          height: 80,
                           decoration: const BoxDecoration(
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(10.0),
@@ -439,15 +439,17 @@ class _ProfilePage extends State<ProfilePage>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 ProfilePanel(
-                                    length: 300,
+                                    length: 250,
                                     title: 'Prom Racing',
                                     subtitle:
-                                        'Participated in Prom Racing from 2020 to 2022 as an\n electrical engineer'),
+                                        'Participated in Prom Racing from 2020 to 2022 as an electrical engineer'),
                                 ProfilePanel(
-                                    title: 'Human Computer Interaction Project',
+                                    title: 'HCI Project',
+                                    length: 250,
                                     subtitle: 'Created a prototype app'),
                                 ProfilePanel(
                                     title: 'Algorithms',
+                                    length: 250,
                                     subtitle:
                                         'Solved interesting algorithmic challenges'),
                               ],
@@ -568,7 +570,7 @@ class _ProfilePage extends State<ProfilePage>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 ProfilePanel(
-                                    length: 300,
+                                    length: 250,
                                     title: 'Great Teacher',
                                     subtitle:
                                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
@@ -599,7 +601,7 @@ class _ProfilePage extends State<ProfilePage>
                               children: const [
                                 ProfilePanel(
                                     title: 'Great Teacher',
-                                    length: 300,
+                                    length: 250,
                                     subtitle:
                                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
                               ],
@@ -628,7 +630,7 @@ class _ProfilePage extends State<ProfilePage>
                               children: const [
                                 ProfilePanel(
                                     title: 'Great Teacher',
-                                    length: 300,
+                                    length: 250,
                                     subtitle:
                                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
                               ],
@@ -658,7 +660,7 @@ class _ProfilePage extends State<ProfilePage>
                               children: const [
                                 ProfilePanel(
                                     title: 'Great Teacher',
-                                    length: 300,
+                                    length: 250,
                                     subtitle:
                                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
                               ],

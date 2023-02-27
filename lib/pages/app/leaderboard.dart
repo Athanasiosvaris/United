@@ -64,10 +64,10 @@ class _LeaderboardPage extends State<LeaderboardPage>
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 20),
+                                    fontSize: 15),
                               ),
                               Image.asset(
-                                'images/Giorgos.png',
+                                'assets/images/Giorgos.png',
                               ),
                               const Text(
                                 'Your points:\n 150',
@@ -75,7 +75,7 @@ class _LeaderboardPage extends State<LeaderboardPage>
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 20),
+                                    fontSize: 15),
                               )
                             ],
                           ),

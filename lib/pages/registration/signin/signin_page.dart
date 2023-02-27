@@ -158,28 +158,36 @@ class _SignInPage extends State<SignInPage> {
                   Container(
                     padding: const EdgeInsets.fromLTRB(30, 5, 10, 5),
                     child: const Text(
-                      'Don`t have an account? Click',
-                      style: TextStyle(fontSize: 15),
-                    ),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      foregroundColor: const Color.fromARGB(238, 157, 61, 206),
-                      textStyle: const TextStyle(fontSize: 15),
-                    ),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: const Text('here'),
-                  ),
-                  // ignore: avoid_unnecessary_containers
-                  Container(
-                    child: const Text(
-                      'to sign up.',
+                      'Don`t have an account?',
                       style: TextStyle(fontSize: 15),
                     ),
                   ),
                 ]),
+                Container(
+                  padding: const EdgeInsets.only(left: 30),
+                  child: Row(
+                    children: [
+                      const Text('Click ', style: TextStyle(fontSize: 15)),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          foregroundColor:
+                              const Color.fromARGB(238, 157, 61, 206),
+                          textStyle: const TextStyle(fontSize: 15),
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Text('here'),
+                      ),
+                      const SizedBox(
+                        child: Text(
+                          'to sign up.',
+                          style: TextStyle(fontSize: 15),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
                 Container(
                   padding: const EdgeInsets.fromLTRB(20, 40, 20, 40),
                   child: Row(
