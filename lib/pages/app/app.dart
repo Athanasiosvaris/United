@@ -3,7 +3,7 @@ import 'package:united/pages/app/home_page.dart';
 import 'package:united/pages/app/leaderboard.dart';
 import 'package:united/pages/app/discover_page.dart';
 import 'package:united/pages/app/profile.dart';
-import 'package:kommunicate_flutter/kommunicate_flutter.dart';
+// import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
@@ -26,24 +26,24 @@ class _App extends State<App> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 202, 196, 208),
       body: _pages[currentPageIndex],
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          try {
-            dynamic conversationObject = {
-              'appId':
-                  '8f0684bd6fd683384b4b1d62b50457e0', // The [APP_ID](https://dashboard.kommunicate.io/settings/install) obtained from kommunicate dashboard.
-            };
-            dynamic result = await KommunicateFlutterPlugin.buildConversation(
-                conversationObject);
-            // ignore: avoid_print
-            print("Conversation builder success : " + result.toString());
-          } on Exception catch (e) {
-            print("Conversation builder error occurred : " + e.toString());
-          }
-        },
-        backgroundColor: const Color.fromARGB(255, 201, 215, 202),
-        child: const Icon(Icons.chat),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () async {
+      //     try {
+      //       dynamic conversationObject = {
+      //         'appId':
+      //             '8f0684bd6fd683384b4b1d62b50457e0', // The [APP_ID](https://dashboard.kommunicate.io/settings/install) obtained from kommunicate dashboard.
+      //       };
+      //       dynamic result = await KommunicateFlutterPlugin.buildConversation(
+      //           conversationObject);
+      //       // ignore: avoid_print
+      //       print("Conversation builder success : " + result.toString());
+      //     } on Exception catch (e) {
+      //       print("Conversation builder error occurred : " + e.toString());
+      //     }
+      //   },
+      //   backgroundColor: const Color.fromARGB(255, 201, 215, 202),
+      //   child: const Icon(Icons.chat),
+      // ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: NavigationBar(
           backgroundColor: const Color.fromARGB(255, 98, 91, 113),

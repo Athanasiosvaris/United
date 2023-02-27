@@ -14,7 +14,7 @@ class _SignUpPage extends State<SignUpPage> {
   List<String> sex = ["Male", "Female"];
   dynamic university;
   List<String> universities = <String>[
-    'National Technical University of Athens',
+    'NTUA',
     'Athens University of Economics',
     'University of Pireus',
     'University of Athens'
@@ -39,6 +39,7 @@ class _SignUpPage extends State<SignUpPage> {
                   // padding: const EdgeInsets.all(5),
                   child: const Text(
                     'Become Part of the community!',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w500,
@@ -243,13 +244,16 @@ class _SignUpPage extends State<SignUpPage> {
                     isExpanded: true,
                     value: university,
                     underline: const SizedBox(), // to remove underline
-                    hint: const Text(
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.black38,
+                    hint: Container(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: const Text(
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.black38,
+                        ),
+                        'Choose your university',
                       ),
-                      'Choose your university',
                     ),
                     elevation: 10,
                     style: const TextStyle(
@@ -266,7 +270,9 @@ class _SignUpPage extends State<SignUpPage> {
                         .map<DropdownMenuItem<String>>((String value) {
                       return DropdownMenuItem(
                         value: value,
-                        child: Text(value),
+                        child: Container(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text(value)),
                       );
                     }).toList(),
                   ),
@@ -283,7 +289,7 @@ class _SignUpPage extends State<SignUpPage> {
                                 height: 80,
                                 child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                        fixedSize: const Size(200, 60),
+                                        fixedSize: const Size(150, 60),
                                         elevation: 10,
                                         shape: const StadiumBorder(),
                                         backgroundColor: const Color.fromARGB(
@@ -305,7 +311,7 @@ class _SignUpPage extends State<SignUpPage> {
                           height: 80,
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                  fixedSize: const Size(200, 60),
+                                  fixedSize: const Size(150, 60),
                                   elevation: 10,
                                   shape:
                                       const StadiumBorder(), //Etsi kano to button rechtangle with circular

@@ -31,6 +31,7 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                   // padding: const EdgeInsets.all(5),
                   child: const Text(
                     'Become Part of the community!',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w500,
@@ -136,7 +137,7 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                                 height: 80,
                                 child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                        fixedSize: const Size(200, 60),
+                                        fixedSize: const Size(150, 60),
                                         elevation: 10,
                                         shape: const StadiumBorder(),
                                         backgroundColor: const Color.fromARGB(
@@ -158,7 +159,7 @@ class _SignUpPagePrivacy extends State<SignUpPagePrivacy> {
                                 height: 80,
                                 child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                        fixedSize: const Size(200, 60),
+                                        fixedSize: const Size(150, 60),
                                         elevation: 10,
                                         shape:
                                             const StadiumBorder(), //Etsi kano to button rechtangle with circular

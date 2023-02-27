@@ -191,7 +191,7 @@ class _SignInPage extends State<SignInPage> {
                         height: 80,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                fixedSize: const Size(200, 60),
+                                fixedSize: const Size(150, 60),
                                 elevation: 10,
                                 shape: const StadiumBorder(),
                                 backgroundColor:
@@ -214,7 +214,7 @@ class _SignInPage extends State<SignInPage> {
                         height: 80,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                fixedSize: const Size(200, 60),
+                                fixedSize: const Size(150, 60),
                                 elevation: 10,
                                 shape:
                                     const StadiumBorder(), //Etsi kano to button rechtangle with circular
