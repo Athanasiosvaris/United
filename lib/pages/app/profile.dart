@@ -36,155 +36,128 @@ class _ProfilePage extends State<ProfilePage>
         body: Column(children: <Widget>[
           Container(
             padding: const EdgeInsets.all(20),
-            height: 240,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Material(
-                      elevation: 10,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Container(
-                        height: 150,
-                        width: 150,
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                                topRight: Radius.circular(10.0),
-                                bottomRight: Radius.circular(10.0),
-                                topLeft: Radius.circular(10.0),
-                                bottomLeft: Radius.circular(10.0)),
-                            image: DecorationImage(
-                                fit: BoxFit.fill,
-                                image: AssetImage(
-                                    '../../../assets/images/person.png'))),
-                      ),
-                    ),
-                    Material(
-                      elevation: 10,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Container(
-                        height: 40,
-                        width: 100,
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(10.0),
-                              bottomRight: Radius.circular(10.0),
-                              topLeft: Radius.circular(10.0),
-                              bottomLeft: Radius.circular(10.0)),
-                          color: Color.fromARGB(255, 217, 217, 217),
-                        ),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'vas99',
-                          style: TextStyle(
-                              fontFamily: 'Roboto',
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15),
+                Container(
+                  width: 150,
+                  padding: const EdgeInsets.all(5),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Material(
+                        elevation: 10,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(10.0),
+                                  bottomRight: Radius.circular(10.0),
+                                  topLeft: Radius.circular(10.0),
+                                  bottomLeft: Radius.circular(10.0)),
+                              image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: AssetImage(
+                                      '../../../assets/images/person.png'))),
                         ),
                       ),
-                    )
-                  ],
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const ProfileDescription(
+                          description: 'vass99',
+                          color: Color.fromARGB(255, 217, 217, 217))
+                    ],
+                  ),
                 ),
-                SizedBox(
-                    width: 260,
-                    child: Column(
-                      children: [
-                        Row(
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const ProfileDescription(
+                              description: 'Contributor level 10',
+                              color: Color.fromARGB(255, 217, 217, 217)),
+                          Material(
+                            elevation: 10,
+                            borderRadius: BorderRadius.circular(10),
+                            child: Container(
+                                decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(10.0),
+                                      bottomRight: Radius.circular(10.0),
+                                      topLeft: Radius.circular(10.0),
+                                      bottomLeft: Radius.circular(10.0)),
+                                  color: Color.fromARGB(255, 217, 217, 217),
+                                ),
+                                alignment: Alignment.center,
+                                padding: const EdgeInsets.all(4),
+                                child: const Icon(Icons.badge)),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const ProfileDescription(
-                                width: 200,
-                                height: 30,
-                                description: 'Contributor level 10',
-                                color: Color.fromARGB(255, 217, 217, 217)),
-                            Material(
-                              elevation: 10,
-                              borderRadius: BorderRadius.circular(10),
-                              child: Container(
-                                  height: 30,
-                                  width: 40,
-                                  decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        topRight: Radius.circular(10.0),
-                                        bottomRight: Radius.circular(10.0),
-                                        topLeft: Radius.circular(10.0),
-                                        bottomLeft: Radius.circular(10.0)),
-                                    color: Color.fromARGB(255, 217, 217, 217),
-                                  ),
-                                  alignment: Alignment.center,
-                                  child: const Icon(Icons.badge)),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              ProfileDescription(
-                                  width: 130,
-                                  height: 30,
-                                  description: 'Score 135',
-                                  color: Color.fromARGB(255, 217, 217, 217)),
-                              ProfileDescription(
-                                  width: 100,
-                                  height: 30,
-                                  description: 'Top 5%',
-                                  color: Color.fromARGB(255, 217, 217, 217))
-                            ]),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Row(
                           children: const [
                             ProfileDescription(
-                                width: 200,
-                                height: 30,
-                                description: 'Computer Science',
+                                description: 'Score 135',
+                                color: Color.fromARGB(255, 217, 217, 217)),
+                            ProfileDescription(
+                                description: 'Top 5%',
                                 color: Color.fromARGB(255, 217, 217, 217))
-                          ],
-                        ),
-                        const SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Container(
-                              height: 50,
-                              width: 100,
-                              alignment: Alignment.center,
-                              child: const Text(
-                                'Followers\n1145',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontFamily: 'Roboto',
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 15),
-                              ),
+                          ]),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          ProfileDescription(
+                              description: 'Computer Science',
+                              color: Color.fromARGB(255, 217, 217, 217))
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            alignment: Alignment.center,
+                            child: const Text(
+                              'Followers\n1145',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'Roboto',
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15),
                             ),
-                            Container(
-                              height: 50,
-                              width: 100,
-                              alignment: Alignment.center,
-                              child: const Text(
-                                'Reviews\n24',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontFamily: 'Roboto',
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 15),
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ))
+                          ),
+                          Container(
+                            alignment: Alignment.center,
+                            child: const Text(
+                              'Reviews\n24',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'Roboto',
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15),
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           ),
@@ -466,6 +439,7 @@ class _ProfilePage extends State<ProfilePage>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 ProfilePanel(
+                                    length: 300,
                                     title: 'Prom Racing',
                                     subtitle:
                                         'Participated in Prom Racing from 2020 to 2022 as an\n electrical engineer'),
@@ -594,8 +568,8 @@ class _ProfilePage extends State<ProfilePage>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 ProfilePanel(
+                                    length: 300,
                                     title: 'Great Teacher',
-                                    length: 400,
                                     subtitle:
                                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
                               ],
@@ -625,7 +599,7 @@ class _ProfilePage extends State<ProfilePage>
                               children: const [
                                 ProfilePanel(
                                     title: 'Great Teacher',
-                                    length: 400,
+                                    length: 300,
                                     subtitle:
                                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
                               ],
@@ -654,7 +628,7 @@ class _ProfilePage extends State<ProfilePage>
                               children: const [
                                 ProfilePanel(
                                     title: 'Great Teacher',
-                                    length: 400,
+                                    length: 300,
                                     subtitle:
                                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
                               ],
@@ -684,7 +658,7 @@ class _ProfilePage extends State<ProfilePage>
                               children: const [
                                 ProfilePanel(
                                     title: 'Great Teacher',
-                                    length: 400,
+                                    length: 300,
                                     subtitle:
                                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac est diam. Phasellus interdum orci nec lacus malesuada facilisis. Nunc nec sapien libero. Aliquam non elit sem. Phasellus placerat sodales malesuada. Maecenas porttitor justo sed pellentesque tincidunt. Nullam quis sem leo. Duis eget molestie neque.')
                               ],
